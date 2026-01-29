@@ -25,6 +25,7 @@ from dataclasses import dataclass, asdict
 from typing import List, Dict, Set, Tuple, Optional
 from pathlib import Path
 from abc import ABC, abstractmethod
+from datetime import datetime
 
 
 # ============================================================================
@@ -1260,20 +1261,27 @@ def main():
         # Generate reports
         print("Generating reports...")
 
+        # Create output folder if it doesn't exist
+        output_dir = Path("output")
+        output_dir.mkdir(exist_ok=True)
+
+        # Generate timestamp for unique report names
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
         # Text report
         text_report = ReportGenerator.generate_text_report(analyses, summary)
         print(text_report)
 
         # Save JSON report
         json_report = ReportGenerator.generate_json_report(analyses, summary)
-        json_path = Path("craftsman_coverage_report.json")
+        json_path = output_dir / f"craftsman_coverage_report_{timestamp}.json"
         with open(json_path, "w", encoding="utf-8") as f:
             f.write(json_report)
         print(f"JSON report saved to: {json_path}")
 
         # Save CSV report
         csv_report = ReportGenerator.generate_csv_report(analyses)
-        csv_path = Path("craftsman_coverage_report.csv")
+        csv_path = output_dir / f"craftsman_coverage_report_{timestamp}.csv"
         with open(csv_path, "w", encoding="utf-8") as f:
             f.write(csv_report)
         print(f"CSV report saved to: {csv_path}")
