@@ -1040,7 +1040,7 @@ class ReportGenerator:
                         for gap in analysis.gaps
                     ],
                 }
-                for analysis in analyses
+                for analysis in sorted(analyses, key=lambda x: x.property_name)
             ],
         }
         return json.dumps(report, indent=2, ensure_ascii=False)
@@ -1063,7 +1063,7 @@ class ReportGenerator:
             "Property,Coverage %,Total Categories,Covered Categories,Missing Category"
         )
 
-        for analysis in analyses:
+        for analysis in sorted(analyses, key=lambda x: x.property_name):
             if analysis.has_gaps():
                 for gap in analysis.gaps:
                     output.append(
@@ -1132,10 +1132,14 @@ class ReportGenerator:
         lines.append("DETAILED PROPERTY ANALYSIS")
         lines.append("-" * 80)
 
-        properties_with_gaps = [a for a in analyses if a.has_gaps()]
-        properties_with_full_coverage = [
-            a for a in analyses if not a.has_gaps()
-        ]
+        properties_with_gaps = sorted(
+            [a for a in analyses if a.has_gaps()],
+            key=lambda x: x.property_name
+        )
+        properties_with_full_coverage = sorted(
+            [a for a in analyses if not a.has_gaps()],
+            key=lambda x: x.property_name
+        )
 
         if properties_with_gaps:
             lines.append("\nPROPERTIES WITH COVERAGE GAPS:")
