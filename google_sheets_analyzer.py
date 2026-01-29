@@ -1677,7 +1677,7 @@ class ReportGenerator:
         summary: CoverageSummary,
     ) -> str:
         """
-        Generate HTML report (can be opened in Word).
+        Generate optimized HTML report with modern styling and interactive features.
 
         Args:
             analyses: List of PropertyCoverageAnalysis objects
@@ -1686,99 +1686,169 @@ class ReportGenerator:
         Returns:
             HTML string
         """
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
         html_parts = [
             "<!DOCTYPE html>",
-            "<html>",
+            "<html lang='en'>",
             "<head>",
             "<meta charset='UTF-8'>",
+            "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
             "<title>Craftsman Coverage Report</title>",
             "<style>",
-            "body { font-family: Arial, sans-serif; margin: 20px; }",
-            "h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }",
-            "h2 { color: #555; margin-top: 30px; }",
-            "table { border-collapse: collapse; width: 100%; margin: 15px 0; }",
-            "th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }",
-            "th { background-color: #007bff; color: white; }",
-            "tr:nth-child(even) { background-color: #f9f9f9; }",
-            ".summary-stat { display: inline-block; margin-right: 30px; }",
-            ".stat-value { font-size: 24px; font-weight: bold; color: #007bff; }",
-            ".stat-label { color: #666; }",
-            ".gap-section { margin: 20px 0; padding: 15px; background-color: #fff3cd; border-left: 4px solid #ffc107; }",
-            ".full-coverage { color: #28a745; font-weight: bold; }",
-            ".no-coverage { color: #dc3545; font-weight: bold; }",
+            "* { margin: 0; padding: 0; box-sizing: border-box; }",
+            "body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 20px; }",
+            ".container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); overflow: hidden; }",
+            ".header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; }",
+            ".header h1 { font-size: 2.5em; margin-bottom: 10px; }",
+            ".header p { font-size: 0.95em; opacity: 0.9; }",
+            ".content { padding: 40px; }",
+            ".metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px; }",
+            ".metric-card { background: white; border: 1px solid #e8eef5; border-radius: 8px; padding: 25px; text-align: center; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }",
+            ".metric-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }",
+            ".metric-value { font-size: 2.5em; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 10px 0; }",
+            ".metric-label { color: #666; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }",
+            ".progress-bar { background: #e8eef5; border-radius: 10px; height: 8px; margin: 10px 0; overflow: hidden; }",
+            ".progress-fill { height: 100%; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); border-radius: 10px; transition: width 0.3s ease; }",
+            "h2 { color: #333; font-size: 1.8em; margin: 35px 0 20px 0; padding-bottom: 10px; border-bottom: 3px solid #667eea; }",
+            "h3 { color: #444; font-size: 1.2em; margin: 15px 0 10px 0; }",
+            ".section { margin-bottom: 35px; }",
+            ".properties-table { width: 100%; border-collapse: collapse; margin-top: 15px; }",
+            ".properties-table th { background: #667eea; color: white; padding: 15px; text-align: left; font-weight: 600; }",
+            ".properties-table td { padding: 12px 15px; border-bottom: 1px solid #e8eef5; }",
+            ".properties-table tr:nth-child(even) { background: #f9fafb; }",
+            ".properties-table tr:hover { background: #f0f2f8; }",
+            ".gap-item { background: #fff8f0; border-left: 4px solid #ff8c42; padding: 15px; margin: 10px 0; border-radius: 4px; }",
+            ".full-coverage { color: #27ae60; font-weight: bold; }",
+            ".partial-coverage { color: #f39c12; font-weight: bold; }",
+            ".no-coverage { color: #e74c3c; font-weight: bold; }",
+            ".property-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e8eef5; }",
+            ".property-name { flex: 1; font-weight: 500; color: #333; }",
+            ".coverage-badge { display: inline-block; padding: 6px 12px; border-radius: 20px; font-size: 0.9em; font-weight: 600; }",
+            ".coverage-badge.excellent { background: #d4edda; color: #155724; }",
+            ".coverage-badge.good { background: #cfe2ff; color: #084298; }",
+            ".coverage-badge.poor { background: #f8d7da; color: #842029; }",
+            ".category-table { width: 100%; border-collapse: collapse; margin-top: 15px; }",
+            ".category-table th { background: #667eea; color: white; padding: 12px; text-align: left; }",
+            ".category-table td { padding: 10px 12px; border-bottom: 1px solid #e8eef5; }",
+            ".category-table tr:nth-child(even) { background: #f9fafb; }",
+            ".footer { background: #f5f7fa; padding: 20px 40px; text-align: center; color: #666; font-size: 0.9em; border-top: 1px solid #e8eef5; }",
+            "@media (max-width: 768px) { .metrics-grid { grid-template-columns: repeat(2, 1fr); } .header h1 { font-size: 1.8em; } }",
             "</style>",
             "</head>",
             "<body>",
-            "<h1>Craftsman Coverage Analysis Report</h1>",
-            f"<p><strong>Generated:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
-            "<p><strong>Data Source:</strong> " + summary.data_source + "</p>",
-            "<h2>Summary Statistics</h2>",
-            "<div class='summary-stat'>",
-            "<div class='stat-value'>" + str(summary.total_properties) + "</div>",
-            "<div class='stat-label'>Total Properties</div>",
+            "<div class='container'>",
+            "<div class='header'>",
+            "<h1>📊 Craftsman Coverage Report</h1>",
+            f"<p>Generated: {timestamp} | Source: {summary.data_source}</p>",
             "</div>",
-            "<div class='summary-stat'>",
-            "<div class='stat-value full-coverage'>" + str(summary.properties_with_full_coverage) + "</div>",
-            "<div class='stat-label'>Full Coverage</div>",
-            "</div>",
-            "<div class='summary-stat'>",
-            "<div class='stat-value no-coverage'>" + str(summary.properties_with_gaps) + "</div>",
-            "<div class='stat-label'>With Gaps</div>",
-            "</div>",
-            "<div class='summary-stat'>",
-            "<div class='stat-value'>" + f"{round(summary.average_coverage_percentage, 1)}" + "%</div>",
-            "<div class='stat-label'>Average Coverage</div>",
-            "</div>",
-            "<br><br>",
-            "<table>",
-            "<tr><th>Metric</th><th>Value</th></tr>",
-            "<tr><td>Total Properties</td><td>" + str(summary.total_properties) + "</td></tr>",
-            "<tr><td>Properties with Full Coverage</td><td>" + str(summary.properties_with_full_coverage) + " (" + f"{round(summary.properties_with_full_coverage/summary.total_properties*100, 1)}" + "%)</td></tr>",
-            "<tr><td>Properties with Gaps</td><td>" + str(summary.properties_with_gaps) + " (" + f"{round(summary.properties_with_gaps/summary.total_properties*100, 1)}" + "%)</td></tr>",
-            "<tr><td>Total Gaps</td><td>" + str(summary.total_gaps_across_all_properties) + "</td></tr>",
-            "<tr><td>Average Coverage</td><td>" + f"{round(summary.average_coverage_percentage, 2)}" + "%</td></tr>",
-            "</table>",
-            "<h2>Categories with Lowest Coverage</h2>",
-            "<table>",
-            "<tr><th>Category</th><th>Properties with Gaps</th></tr>",
+            "<div class='content'>",
+            "<h2>🎯 Key Metrics</h2>",
+            "<div class='metrics-grid'>",
         ]
 
-        for category, count in summary.categories_with_lowest_coverage.items():
-            html_parts.append(f"<tr><td>{category}</td><td>{count}</td></tr>")
+        # Add metric cards
+        total_pct = summary.total_properties if summary.total_properties > 0 else 1
+        full_coverage_pct = (summary.properties_with_full_coverage / total_pct * 100)
+        gaps_pct = (summary.properties_with_gaps / total_pct * 100)
 
         html_parts.extend([
-            "</table>",
-            "<h2>Properties with Gaps</h2>",
+            "<div class='metric-card'>",
+            "<div class='metric-label'>Total Properties</div>",
+            f"<div class='metric-value'>{summary.total_properties}</div>",
+            "</div>",
+            "<div class='metric-card'>",
+            "<div class='metric-label'>Full Coverage</div>",
+            f"<div class='metric-value'>{summary.properties_with_full_coverage}</div>",
+            f"<div class='progress-bar'><div class='progress-fill' style='width: {full_coverage_pct}%'></div></div>",
+            f"<div style='color: #27ae60; font-weight: bold;'>{full_coverage_pct:.1f}%</div>",
+            "</div>",
+            "<div class='metric-card'>",
+            "<div class='metric-label'>Coverage Gaps</div>",
+            f"<div class='metric-value'>{summary.properties_with_gaps}</div>",
+            f"<div class='progress-bar'><div class='progress-fill' style='width: {gaps_pct}%'></div></div>",
+            f"<div style='color: #e74c3c; font-weight: bold;'>{gaps_pct:.1f}%</div>",
+            "</div>",
+            "<div class='metric-card'>",
+            "<div class='metric-label'>Average Coverage</div>",
+            f"<div class='metric-value'>{round(summary.average_coverage_percentage, 1)}%</div>",
+            f"<div class='progress-bar'><div class='progress-fill' style='width: {summary.average_coverage_percentage}%'></div></div>",
+            f"<div style='color: #667eea; font-weight: bold;'>{summary.total_gaps_across_all_properties} gaps</div>",
+            "</div>",
+            "</div>",
         ])
 
+        # Categories with lowest coverage
+        if summary.categories_with_lowest_coverage:
+            html_parts.extend([
+                "<div class='section'>",
+                "<h2>⚠️ Categories with Lowest Coverage</h2>",
+                "<table class='category-table'>",
+                "<tr><th>Category</th><th>Properties Missing</th></tr>",
+            ])
+            for category, count in summary.categories_with_lowest_coverage.items():
+                html_parts.append(f"<tr><td>{category}</td><td><strong>{count}</strong></td></tr>")
+            html_parts.extend(["</table>", "</div>"])
+
+        # Properties with gaps
         gaps_found = False
-        for analysis in sorted(analyses, key=lambda x: x.property_name):
-            if analysis.has_gaps():
+        gap_analyses = sorted([a for a in analyses if a.has_gaps()], key=lambda x: x.property_name)
+
+        if gap_analyses:
+            html_parts.extend([
+                "<div class='section'>",
+                "<h2>📋 Properties with Coverage Gaps</h2>",
+            ])
+            for analysis in gap_analyses:
                 gaps_found = True
-                html_parts.append(f"<div class='gap-section'>")
-                html_parts.append(f"<h3>{analysis.property_name}</h3>")
-                html_parts.append(f"<p><strong>Coverage:</strong> {analysis.covered_categories}/{analysis.total_categories} categories ({round(analysis.coverage_percentage, 1)}%)</p>")
-                html_parts.append("<ul>")
+                coverage_pct = analysis.coverage_percentage
+                if coverage_pct >= 90:
+                    badge_class = "good"
+                    badge_text = f"✓ {coverage_pct:.1f}%"
+                elif coverage_pct > 0:
+                    badge_class = "excellent"
+                    badge_text = f"△ {coverage_pct:.1f}%"
+                else:
+                    badge_class = "poor"
+                    badge_text = f"✗ {coverage_pct:.1f}%"
+
+                html_parts.extend([
+                    "<div class='gap-item'>",
+                    f"<div class='property-row'>",
+                    f"<div class='property-name'>{analysis.property_name}</div>",
+                    f"<span class='coverage-badge {badge_class}'>{badge_text}</span>",
+                    f"</div>",
+                    f"<div style='margin: 8px 0; color: #666; font-size: 0.9em;'>{analysis.covered_categories}/{analysis.total_categories} categories covered</div>",
+                    "<div style='margin-top: 10px;'>",
+                ])
+
                 for gap in analysis.gaps:
-                    html_parts.append(f"<li><strong>{gap.category}</strong></li>")
-                html_parts.append("</ul>")
-                html_parts.append("</div>")
+                    html_parts.append(f"<span style='display: inline-block; background: #ffe6e6; color: #c00; padding: 4px 8px; margin: 2px; border-radius: 3px; font-size: 0.85em;'>{gap.category}</span>")
 
-        if not gaps_found:
-            html_parts.append("<p><em>No properties with gaps found!</em></p>")
+                html_parts.extend(["</div>", "</div>"])
+            html_parts.append("</div>")
+
+        # Properties with full coverage
+        full_coverage_analyses = sorted([a for a in analyses if not a.has_gaps()], key=lambda x: x.property_name)
+
+        if full_coverage_analyses:
+            html_parts.extend([
+                "<div class='section'>",
+                "<h2>✅ Properties with Full Coverage</h2>",
+                f"<p style='color: #666; margin-bottom: 15px;'>{len(full_coverage_analyses)} properties have complete coverage across all categories</p>",
+                "<table class='properties-table'>",
+                "<tr><th>Property</th><th style='text-align: center;'>Coverage</th></tr>",
+            ])
+            for analysis in full_coverage_analyses:
+                html_parts.append(f"<tr><td>{analysis.property_name}</td><td style='text-align: center;'><span class='coverage-badge excellent'>100%</span></td></tr>")
+            html_parts.extend(["</table>", "</div>"])
 
         html_parts.extend([
-            "<h2>Properties with Full Coverage</h2>",
-            "<table>",
-            "<tr><th>Property</th><th>Coverage</th></tr>",
-        ])
-
-        for analysis in sorted(analyses, key=lambda x: x.property_name):
-            if not analysis.has_gaps():
-                html_parts.append(f"<tr><td>{analysis.property_name}</td><td class='full-coverage'>100%</td></tr>")
-
-        html_parts.extend([
-            "</table>",
+            "</div>",
+            "<div class='footer'>",
+            "<p>Craftsman Coverage Analysis Report | Auto-generated with format-agnostic address matching</p>",
+            "</div>",
+            "</div>",
             "</body>",
             "</html>",
         ])
