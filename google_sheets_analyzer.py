@@ -1762,7 +1762,8 @@ class ReportGenerator:
             "  gapItems.forEach(item => {",
             "    const name = item.textContent.toLowerCase();",
             "    const coverageStr = item.querySelector('.coverage-badge').textContent;",
-            "    const coverage = parseFloat(coverageStr) || 0;",
+            "    const match = coverageStr.match(/\\d+\\.?\\d*/);",
+            "    const coverage = match ? parseFloat(match[0]) : 0;",
             "    ",
             "    let show = true;",
             "    if (searchTerm && !name.includes(searchTerm)) show = false;",
@@ -1901,10 +1902,10 @@ class ReportGenerator:
                 gaps_found = True
                 coverage_pct = analysis.coverage_percentage
                 if coverage_pct >= 90:
-                    badge_class = "good"
+                    badge_class = "excellent"
                     badge_text = f"✓ {coverage_pct:.1f}%"
                 elif coverage_pct > 0:
-                    badge_class = "excellent"
+                    badge_class = "good"
                     badge_text = f"△ {coverage_pct:.1f}%"
                 else:
                     badge_class = "poor"
