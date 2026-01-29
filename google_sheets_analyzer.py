@@ -23,6 +23,7 @@ import json
 import csv
 import os
 import sys
+import re
 from dataclasses import dataclass, asdict
 from typing import List, Dict, Set, Tuple, Optional
 from pathlib import Path
@@ -761,6 +762,332 @@ class CSVDataSource(DataSource):
 
 
 # ============================================================================
+# ADAPTIVE ADDRESS PARSER
+# ============================================================================
+
+class AdaptiveTokenizer:
+    """Breaks service areas into meaningful tokens."""
+
+    def tokenize(self, text: str) -> List[Dict]:
+        """
+        Tokenize a service area string into meaningful tokens.
+
+        Returns list of tokens with their types and values.
+        """
+        if not text or not text.strip():
+            return []
+
+        tokens = []
+        # Split by common delimiters: " / ", ",", and space
+        # But preserve structure
+        parts = []
+
+        # First split by " / " (main street separator)
+        for segment in text.split(" / "):
+            # Then split by comma
+            for subsegment in segment.split(","):
+                subsegment = subsegment.strip()
+                if subsegment:
+                    parts.append(subsegment)
+
+        for part in parts:
+            tokens.extend(self._tokenize_part(part))
+
+        return tokens
+
+    def _tokenize_part(self, part: str) -> List[Dict]:
+        """Tokenize a single part (street or numbers)."""
+        tokens = []
+
+        # Split by slash for number ranges
+        if "/" in part and not any(c.isalpha() for c in part.split("/")[0]):
+            # Pure number range like "1/3/5"
+            numbers = part.split("/")
+            for num in numbers:
+                num = num.strip()
+                if num.isdigit():
+                    tokens.append({"type": "NUMBER", "value": num})
+        else:
+            # Mixed content: street with numbers or just street
+            # Try to separate street from numbers
+            match = re.match(r'^(.*?)[\s.]*(\d+.*)$', part)
+            if match:
+                street_part = match.group(1).strip()
+                number_part = match.group(2)
+
+                if street_part:
+                    tokens.append({"type": "STREET", "value": street_part})
+
+                # Extract numbers from number_part
+                number_tokens = self._extract_numbers_from_part(number_part)
+                tokens.extend(number_tokens)
+            else:
+                # No numbers, just text
+                if part:
+                    # Check if it's a postal code
+                    if re.match(r'^\d{4,5}\s+', part):
+                        tokens.append({"type": "POSTAL", "value": part})
+                    elif re.match(r'^[A-Z]', part):
+                        tokens.append({"type": "CITY", "value": part})
+                    else:
+                        tokens.append({"type": "STREET", "value": part})
+
+        return tokens
+
+    def _extract_numbers_from_part(self, part: str) -> List[Dict]:
+        """Extract numbers from a part containing mixed content."""
+        tokens = []
+        # Find all numbers separated by slashes or standalone
+        matches = re.findall(r'(\d+)', part)
+        for num in matches:
+            if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
+                tokens.append({"type": "NUMBER", "value": num})
+        return tokens
+
+
+class SegmentParser:
+    """Extracts meaning from individual segments."""
+
+    def parse_segment(self, segment: str) -> Dict:
+        """
+        Parse a service area segment.
+
+        Returns dict with classification and confidence.
+        """
+        segment = segment.strip()
+        if not segment:
+            return {"type": "UNKNOWN", "value": segment, "confidence": 0.0}
+
+        # Postal code pattern: 4-5 digits + city
+        if re.match(r'^\d{4,5}\s+[A-Z]', segment):
+            return {"type": "POSTAL_CODE", "value": segment, "confidence": 0.95}
+
+        # Pure number
+        if re.match(r'^\d+$', segment):
+            return {"type": "NUMBER", "value": int(segment), "confidence": 0.9}
+
+        # Street name (has letters and possibly numbers)
+        if any(c.isalpha() for c in segment):
+            # Extract street and any attached numbers
+            match = re.match(r'^(.*?)[\s.]*(\d+.*)$', segment)
+            if match:
+                street = match.group(1).strip()
+                numbers_part = match.group(2)
+                numbers = self._extract_numbers(numbers_part)
+                return {
+                    "type": "STREET",
+                    "street": street,
+                    "numbers": numbers,
+                    "confidence": 0.85
+                }
+            else:
+                return {
+                    "type": "STREET",
+                    "street": segment,
+                    "numbers": [],
+                    "confidence": 0.8
+                }
+
+        return {"type": "UNKNOWN", "value": segment, "confidence": 0.0}
+
+    def _extract_numbers(self, part: str) -> List[str]:
+        """Extract numbers from a mixed content part."""
+        numbers = []
+        matches = re.findall(r'(\d+)', part)
+        for num in matches:
+            if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
+                numbers.append(num)
+        return list(set(numbers))  # Remove duplicates
+
+
+class AdaptiveMatcher:
+    """Matches properties to service areas intelligently."""
+
+    def __init__(self):
+        """Initialize the adaptive matcher."""
+        self.tokenizer = AdaptiveTokenizer()
+        self.parser = SegmentParser()
+        self.learned_patterns = {}
+
+    def extract_patterns(self, service_areas: List[str]) -> Dict:
+        """
+        Learn common patterns from all service areas.
+
+        Returns dictionary of discovered patterns.
+        """
+        patterns = {
+            "formats": {},
+            "delimiters": {},
+            "street_types": set(),
+            "postal_patterns": []
+        }
+
+        for area in service_areas:
+            # Analyze format
+            format_key = self._detect_format(area)
+            patterns["formats"][format_key] = patterns["formats"].get(format_key, 0) + 1
+
+            # Detect delimiters
+            if " / " in area:
+                patterns["delimiters"][" / "] = patterns["delimiters"].get(" / ", 0) + 1
+            if "," in area:
+                patterns["delimiters"][","] = patterns["delimiters"].get(",", 0) + 1
+
+        self.learned_patterns = patterns
+        return patterns
+
+    def _detect_format(self, area: str) -> str:
+        """Detect the format of a service area."""
+        if " / " in area and not re.search(r'^\d', area.split(" / ")[0]):
+            if all(re.match(r'^\d+', part.strip()) for part in area.split(" / ")[1:]):
+                return "multi_property_range"
+            else:
+                return "multi_street"
+        elif "," in area:
+            return "comma_separated"
+        else:
+            return "simple"
+
+    def match_property(self, property_address: str, service_area: str) -> Dict:
+        """
+        Match property to service area using learned patterns.
+
+        Returns dict with match result and confidence.
+        """
+        # Extract property info
+        prop_tokens = self.tokenizer.tokenize(property_address)
+        prop_street = self._extract_street_from_tokens(prop_tokens)
+        prop_numbers = self._extract_numbers_from_tokens(prop_tokens)
+
+        # Parse service area
+        area_format = self._detect_format(service_area)
+        parsed = self._parse_by_format(service_area, area_format)
+
+        # Try matching
+        for parsed_segment in parsed:
+            if self._streets_match(prop_street, parsed_segment.get("street", "")):
+                service_numbers = parsed_segment.get("numbers", [])
+                if service_numbers and prop_numbers:
+                    if any(pn in service_numbers for pn in prop_numbers):
+                        return {
+                            "matched": True,
+                            "confidence": 0.9,
+                            "reason": "street_and_number_match",
+                            "matched_by": "adaptive_parser"
+                        }
+
+        return {
+            "matched": False,
+            "confidence": 0.0,
+            "reason": "no_match",
+            "matched_by": "adaptive_parser"
+        }
+
+    def _extract_street_from_tokens(self, tokens: List[Dict]) -> str:
+        """Extract street name from tokens."""
+        for token in tokens:
+            if token.get("type") == "STREET":
+                return token.get("value", "")
+        return ""
+
+    def _extract_numbers_from_tokens(self, tokens: List[Dict]) -> List[str]:
+        """Extract numbers from tokens."""
+        numbers = []
+        for token in tokens:
+            if token.get("type") == "NUMBER":
+                numbers.append(str(token.get("value", "")))
+        return numbers
+
+    def _parse_by_format(self, area: str, format_type: str) -> List[Dict]:
+        """Parse service area according to detected format."""
+        parsed = []
+
+        if format_type == "multi_property_range":
+            # "Street 65 / 67 / 69 / 71" format
+            segments = area.split(" / ")
+            last_street = None
+
+            for segment in segments:
+                segment = segment.strip()
+                parsed_seg = self.parser.parse_segment(segment)
+
+                if parsed_seg["type"] == "STREET":
+                    last_street = parsed_seg.get("street", "")
+                    numbers = parsed_seg.get("numbers", [])
+                elif parsed_seg["type"] == "NUMBER":
+                    if last_street:
+                        parsed.append({
+                            "street": last_street,
+                            "numbers": [str(parsed_seg["value"])]
+                        })
+                    else:
+                        parsed.append({
+                            "street": "",
+                            "numbers": [str(parsed_seg["value"])]
+                        })
+
+        elif format_type == "multi_street":
+            # "Street1 nums / Street2 nums" format
+            segments = area.split(" / ")
+            for segment in segments:
+                segment = segment.strip()
+                parsed_seg = self.parser.parse_segment(segment)
+                if parsed_seg["type"] == "STREET":
+                    parsed.append({
+                        "street": parsed_seg.get("street", ""),
+                        "numbers": parsed_seg.get("numbers", [])
+                    })
+
+        elif format_type == "comma_separated":
+            # "Street 1, 2, 3, 4, City" format
+            parts = area.split(",")
+            street = None
+            numbers = []
+
+            for part in parts:
+                part = part.strip()
+                parsed_part = self.parser.parse_segment(part)
+
+                if parsed_part["type"] == "STREET":
+                    street = parsed_part.get("street", "")
+                elif parsed_part["type"] == "NUMBER":
+                    numbers.append(str(parsed_part["value"]))
+
+            if street and numbers:
+                parsed.append({"street": street, "numbers": numbers})
+
+        else:
+            # Simple format
+            parsed_seg = self.parser.parse_segment(area)
+            if parsed_seg["type"] == "STREET":
+                parsed.append({
+                    "street": parsed_seg.get("street", ""),
+                    "numbers": parsed_seg.get("numbers", [])
+                })
+
+        return parsed
+
+    def _streets_match(self, street1: str, street2: str) -> bool:
+        """Check if two street names match (with normalization)."""
+        if not street1 or not street2:
+            return False
+
+        # Normalize both
+        norm1 = self._normalize_street(street1)
+        norm2 = self._normalize_street(street2)
+
+        return norm1 == norm2
+
+    def _normalize_street(self, street: str) -> str:
+        """Normalize a street name."""
+        normalized = street.lower().strip()
+        normalized = re.sub(r'\.', '', normalized)
+        normalized = re.sub(r'\s+', '', normalized)
+        normalized = re.sub(r'strasse$|straße$', 'str', normalized)
+        return normalized
+
+
+# ============================================================================
 # ANALYSIS ENGINE
 # ============================================================================
 
@@ -784,6 +1111,16 @@ class CraftsmanCoverageAnalyzer:
         self.properties = properties
         self.categories = categories
         self.craftsmen = craftsmen
+
+        # Initialize adaptive parser
+        self.adaptive_matcher = AdaptiveMatcher()
+
+        # Learn patterns from service areas
+        all_service_areas = []
+        for craftsman in craftsmen.values():
+            all_service_areas.extend(craftsman.service_areas_plz)
+        if all_service_areas:
+            self.adaptive_matcher.extract_patterns(all_service_areas)
 
     def extract_plz_from_address(self, property_address: str) -> Optional[str]:
         """
@@ -883,6 +1220,7 @@ class CraftsmanCoverageAnalyzer:
         1. Full explicit address match (e.g., "Main Street 101" in service area)
         2. Same street with matching property number (e.g., property "71" in "St. 65/67/69/71")
         3. Normalized street match with property number (handles abbreviations)
+        4. Adaptive pattern matching (learns from data structure)
 
         Args:
             property_address: Property address (e.g., "Calandastrasse 16 8048")
@@ -891,8 +1229,6 @@ class CraftsmanCoverageAnalyzer:
         Returns:
             List of craftsmen names that can serve this property/category
         """
-        import re
-
         street_name = self.extract_street_name(property_address)  # "Calandastrasse 16"
         property_numbers = self.extract_apartment_numbers(property_address)  # ["16"]
         matching_craftsmen = []
@@ -963,6 +1299,16 @@ class CraftsmanCoverageAnalyzer:
 
                     if serves_property:
                         break
+
+                    # PRIORITY 3: Adaptive pattern matching (fallback)
+                    # Try adaptive matcher if existing logic didn't find a match
+                    if not serves_property:
+                        adaptive_result = self.adaptive_matcher.match_property(
+                            property_address, service_area
+                        )
+                        if adaptive_result.get("matched"):
+                            serves_property = True
+                            break
 
             if serves_property:
                 matching_craftsmen.append(craftsman_name)
