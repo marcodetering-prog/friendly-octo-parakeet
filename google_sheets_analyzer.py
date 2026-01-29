@@ -1234,9 +1234,10 @@ class ReportGenerator:
             lines.append("-" * 80)
             for service_area in sorted(unmatched_areas.keys()):
                 craftsmen = unmatched_areas[service_area]
-                lines.append(f"\n{service_area}:")
+                lines.append(f"\nService Area: {service_area}")
+                lines.append(f"  Craftsmen serving this area: {len(craftsmen)}")
                 for craftsman_name in craftsmen:
-                    lines.append(f"  - {craftsman_name}")
+                    lines.append(f"    - {craftsman_name}")
             lines.append("")
 
         lines.append("=" * 80)
