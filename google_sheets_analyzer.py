@@ -938,15 +938,15 @@ class CraftsmanCoverageAnalyzer:
         Find service areas in craftsmen that don't match any property.
 
         Returns:
-            Dictionary mapping craftsman name to list of unmatched service areas
+            Dictionary mapping service area to list of craftsmen that serve it
         """
-        unmatched = {}
+        # First pass: find all unmatched service areas and which craftsmen serve them
+        unmatched_by_area = {}
 
         for craftsman_name, craftsman in self.craftsmen.items():
             if not craftsman.service_areas_plz:
                 continue
 
-            unmatched_areas = []
             for service_area in craftsman.service_areas_plz:
                 # Check if this service area matches any property
                 area_matches_property = False
@@ -978,12 +978,16 @@ class CraftsmanCoverageAnalyzer:
                             break
 
                 if not area_matches_property:
-                    unmatched_areas.append(service_area)
+                    # Add this craftsman to the unmatched service area
+                    if service_area not in unmatched_by_area:
+                        unmatched_by_area[service_area] = []
+                    unmatched_by_area[service_area].append(craftsman_name)
 
-            if unmatched_areas:
-                unmatched[craftsman_name] = unmatched_areas
+        # Sort craftsmen names for each service area
+        for service_area in unmatched_by_area:
+            unmatched_by_area[service_area] = sorted(unmatched_by_area[service_area])
 
-        return unmatched
+        return unmatched_by_area
 
     def generate_summary(
         self, analyses: List[PropertyCoverageAnalysis], source_name: str
@@ -1228,11 +1232,11 @@ class ReportGenerator:
             lines.append("\nUNMATCHED CRAFTSMAN SERVICE AREAS:")
             lines.append("(Service areas that don't match any property)")
             lines.append("-" * 80)
-            for craftsman_name in sorted(unmatched_areas.keys()):
-                areas = unmatched_areas[craftsman_name]
-                lines.append(f"\n{craftsman_name}:")
-                for area in sorted(areas):
-                    lines.append(f"  - {area}")
+            for service_area in sorted(unmatched_areas.keys()):
+                craftsmen = unmatched_areas[service_area]
+                lines.append(f"\n{service_area}:")
+                for craftsman_name in craftsmen:
+                    lines.append(f"  - {craftsman_name}")
             lines.append("")
 
         lines.append("=" * 80)
