@@ -1267,35 +1267,51 @@ class CraftsmanCoverageAnalyzer:
                     last_street_name = None
 
                     for segment in service_segments:
-                        service_street_part = segment.split("/")[0].split(",")[0].strip()
-                        # Remove trailing numbers (handle "Badenerstr.717" and "Badenerstr. 717")
-                        service_street_only = re.sub(r'[\s.]*\d+.*$', '', service_street_part).strip()
+                        # Handle segments that may contain multiple streets: "Mühlez. 56/Albisr. 261/263/265"
+                        # Try each "/" separated part
+                        slash_parts = segment.split("/")
+                        for slash_part in slash_parts:
+                            service_street_part = slash_part.split(",")[0].strip()
+                            # Remove trailing numbers (handle "Badenerstr.717" and "Badenerstr. 717")
+                            service_street_only = re.sub(r'[\s.]*\d+.*$', '', service_street_part).strip()
 
-                        # If this segment has no street name but previous one did, use last known street
-                        if not service_street_only and last_street_name:
-                            service_street_only = last_street_name
-                        elif service_street_only:
-                            # Update last known street for next iteration
-                            last_street_name = service_street_only
+                            # If this segment has no street name but previous one did, use last known street
+                            if not service_street_only and last_street_name:
+                                service_street_only = last_street_name
+                            elif service_street_only:
+                                # Update last known street for next iteration
+                                last_street_name = service_street_only
 
-                        # Try exact match first
-                        street_match = (
-                            service_street_only.lower() == property_street_only.lower()
-                        ) if service_street_only else False
+                            # Try exact match first
+                            street_match = (
+                                service_street_only.lower() == property_street_only.lower()
+                            ) if service_street_only else False
 
-                        # If no exact match, try normalized match (handles abbreviations)
-                        if not street_match and service_street_only:
-                            normalized_property = self.normalize_street_name(property_street_only)
-                            normalized_service = self.normalize_street_name(service_street_only)
-                            street_match = (normalized_property == normalized_service)
+                            # If no exact match, try normalized match (handles abbreviations)
+                            if not street_match and service_street_only:
+                                normalized_property = self.normalize_street_name(property_street_only)
+                                normalized_service = self.normalize_street_name(service_street_only)
+                                street_match = (normalized_property == normalized_service)
 
-                        if street_match and property_numbers:
-                            # Extract all property numbers from this segment
-                            service_numbers = self.extract_apartment_numbers(segment)
-                            # Check if property number is in service area numbers
-                            if service_numbers and any(pn in service_numbers for pn in property_numbers):
-                                serves_property = True
-                                break
+                            # If still no match, try prefix matching (handles custom abbreviations like "Albisr" for "Albisriederstr")
+                            if not street_match and service_street_only:
+                                normalized_property = self.normalize_street_name(property_street_only)
+                                normalized_service = self.normalize_street_name(service_street_only)
+                                # Check if one is a prefix of the other (minimum 4 chars to avoid false positives)
+                                if len(normalized_service) >= 4 and len(normalized_property) >= 4:
+                                    street_match = (normalized_property.startswith(normalized_service) or
+                                                   normalized_service.startswith(normalized_property))
+
+                            if street_match and property_numbers:
+                                # Extract numbers from the entire segment for this match
+                                service_numbers = self.extract_apartment_numbers(segment)
+                                # Check if property number is in service area numbers
+                                if service_numbers and any(pn in service_numbers for pn in property_numbers):
+                                    serves_property = True
+                                    break
+
+                        if serves_property:
+                            break
 
                     if serves_property:
                         break
