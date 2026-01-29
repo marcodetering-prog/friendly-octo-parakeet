@@ -1,5 +1,5 @@
 # PDF Report Generation
-weasyprint==60.1
+reportlab==4.0.9
 
 # Analyzer uses Python standard library for main functionality:
 # - json: JSON report generation

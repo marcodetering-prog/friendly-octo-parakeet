@@ -1963,7 +1963,7 @@ class ReportGenerator:
         summary: CoverageSummary,
     ) -> bytes:
         """
-        Generate PDF report from HTML using weasyprint.
+        Generate PDF report using reportlab.
 
         Args:
             analyses: List of PropertyCoverageAnalysis objects
@@ -1973,19 +1973,151 @@ class ReportGenerator:
             PDF file as bytes
         """
         try:
-            from weasyprint import HTML
+            from reportlab.lib.pagesizes import letter
+            from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+            from reportlab.lib.units import inch
+            from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak
+            from reportlab.lib import colors
+            from io import BytesIO
         except ImportError:
             raise ImportError(
-                "weasyprint is required for PDF generation. "
-                "Install it with: pip install weasyprint"
+                "reportlab is required for PDF generation. "
+                "Install it with: pip install reportlab"
             )
 
-        # Generate HTML report
-        html_content = ReportGenerator.generate_html_report(analyses, summary)
+        # Create PDF in memory
+        pdf_buffer = BytesIO()
+        doc = SimpleDocTemplate(pdf_buffer, pagesize=letter,
+                                rightMargin=0.75*inch, leftMargin=0.75*inch,
+                                topMargin=0.75*inch, bottomMargin=0.75*inch)
 
-        # Convert HTML to PDF
-        pdf_bytes = HTML(string=html_content).write_pdf()
-        return pdf_bytes
+        # Container for the 'Flowable' objects
+        elements = []
+
+        # Define styles
+        styles = getSampleStyleSheet()
+        title_style = ParagraphStyle(
+            'CustomTitle',
+            parent=styles['Heading1'],
+            fontSize=24,
+            textColor=colors.HexColor('#667eea'),
+            spaceAfter=30,
+            alignment=1  # Center alignment
+        )
+        heading_style = ParagraphStyle(
+            'CustomHeading',
+            parent=styles['Heading2'],
+            fontSize=14,
+            textColor=colors.HexColor('#333'),
+            spaceAfter=12,
+            spaceBefore=12
+        )
+
+        # Title
+        elements.append(Paragraph("Craftsman Coverage Analysis Report", title_style))
+        elements.append(Spacer(1, 0.3*inch))
+
+        # Summary section
+        elements.append(Paragraph("Summary Statistics", heading_style))
+        summary_data = [
+            ["Metric", "Value"],
+            ["Total Properties", str(summary.total_properties)],
+            ["Properties with Full Coverage", str(summary.properties_with_full_coverage)],
+            ["Properties with Gaps", str(summary.properties_with_gaps)],
+            ["Average Coverage", f"{round(summary.average_coverage_percentage, 2)}%"],
+            ["Total Gaps", str(summary.total_gaps_across_all_properties)],
+        ]
+        summary_table = Table(summary_data, colWidths=[3*inch, 2*inch])
+        summary_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#667eea')),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('FONTSIZE', (0, 1), (-1, -1), 10),
+        ]))
+        elements.append(summary_table)
+        elements.append(Spacer(1, 0.3*inch))
+
+        # Categories with lowest coverage
+        if summary.categories_with_lowest_coverage:
+            elements.append(Paragraph("Categories with Lowest Coverage", heading_style))
+            cat_data = [["Category", "Properties Missing"]]
+            for category, count in summary.categories_with_lowest_coverage.items():
+                cat_data.append([category, str(count)])
+            cat_table = Table(cat_data, colWidths=[3.5*inch, 1.5*inch])
+            cat_table.setStyle(TableStyle([
+                ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#764ba2')),
+                ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                ('FONTSIZE', (0, 0), (-1, 0), 11),
+                ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                ('BACKGROUND', (0, 1), (-1, -1), colors.lightgrey),
+                ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                ('FONTSIZE', (0, 1), (-1, -1), 9),
+            ]))
+            elements.append(cat_table)
+            elements.append(Spacer(1, 0.3*inch))
+
+        # Properties with gaps
+        gap_analyses = sorted([a for a in analyses if a.has_gaps()], key=lambda x: x.property_name)
+        if gap_analyses:
+            elements.append(PageBreak())
+            elements.append(Paragraph("Properties with Coverage Gaps", heading_style))
+            gap_data = [["Property", "Coverage %", "Covered / Total", "Missing Categories"]]
+            for analysis in gap_analyses:
+                missing_cats = ", ".join([gap.category for gap in analysis.gaps])
+                gap_data.append([
+                    analysis.property_name,
+                    f"{analysis.coverage_percentage:.1f}%",
+                    f"{analysis.covered_categories}/{analysis.total_categories}",
+                    missing_cats
+                ])
+            gap_table = Table(gap_data, colWidths=[1.5*inch, 1*inch, 1.2*inch, 1.3*inch])
+            gap_table.setStyle(TableStyle([
+                ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#ff8c42')),
+                ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                ('FONTSIZE', (0, 0), (-1, 0), 10),
+                ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                ('BACKGROUND', (0, 1), (-1, -1), colors.HexColor('#fff8f0')),
+                ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                ('FONTSIZE', (0, 1), (-1, -1), 8),
+            ]))
+            elements.append(gap_table)
+            elements.append(Spacer(1, 0.3*inch))
+
+        # Properties with full coverage
+        full_analyses = sorted([a for a in analyses if not a.has_gaps()], key=lambda x: x.property_name)
+        if full_analyses:
+            elements.append(PageBreak())
+            elements.append(Paragraph("Properties with Full Coverage", heading_style))
+            full_data = [["Property", "Coverage"]]
+            for analysis in full_analyses:
+                full_data.append([analysis.property_name, "100%"])
+            full_table = Table(full_data, colWidths=[4*inch, 1*inch])
+            full_table.setStyle(TableStyle([
+                ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#27ae60')),
+                ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                ('FONTSIZE', (0, 0), (-1, 0), 10),
+                ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                ('BACKGROUND', (0, 1), (-1, -1), colors.HexColor('#d4edda')),
+                ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                ('FONTSIZE', (0, 1), (-1, -1), 9),
+            ]))
+            elements.append(full_table)
+
+        # Build PDF
+        doc.build(elements)
+        pdf_buffer.seek(0)
+        return pdf_buffer.read()
 
     @staticmethod
     def generate_text_report(
