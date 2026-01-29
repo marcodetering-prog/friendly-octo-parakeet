@@ -765,8 +765,103 @@ class CSVDataSource(DataSource):
 # ADAPTIVE ADDRESS PARSER
 # ============================================================================
 
+class FormatLearner:
+    """Learns number patterns from service areas for format-agnostic extraction."""
+
+    def __init__(self):
+        """Initialize the format learner."""
+        self.patterns = {
+            "number_separators": {},  # Learned delimiters between numbers
+            "range_patterns": [],      # Learned range patterns
+            "prefix_patterns": {},     # Learned prefixes before numbers
+            "suffix_patterns": {}      # Learned suffixes after numbers
+        }
+
+    def learn_from_service_areas(self, service_areas: List[str]) -> None:
+        """
+        Analyze service areas to learn number extraction patterns.
+
+        Args:
+            service_areas: List of service area strings
+        """
+        for area in service_areas:
+            self._analyze_area(area)
+
+    def _analyze_area(self, area: str) -> None:
+        """Analyze a single service area to extract patterns."""
+        # Find sequences of numbers and what separates them
+        number_sequences = re.findall(r'(\d+(?:[^\d\w]+\d+)*)', area)
+
+        for seq in number_sequences:
+            # Detect separators between numbers
+            separators = re.findall(r'\d+([^\d\w]+)(?=\d)', seq)
+            for sep in separators:
+                self.patterns["number_separators"][sep] = self.patterns["number_separators"].get(sep, 0) + 1
+
+            # Detect range patterns (e.g., "1-13", "1 - 13")
+            if re.search(r'\d+\s*[-–—]\s*\d+', seq):
+                self.patterns["range_patterns"].append(seq)
+
+    def extract_numbers(self, text: str) -> List[str]:
+        """
+        Extract apartment numbers using learned patterns.
+
+        Falls back to generic extraction if no patterns are recognized.
+
+        Args:
+            text: Text potentially containing apartment numbers
+
+        Returns:
+            List of extracted apartment numbers
+        """
+        numbers = []
+
+        # Try range pattern first (works for any range format)
+        # Handle patterns like "1-13", "1 - 13", "1–13" (with em-dash)
+        range_match = re.search(r'(\d+)\s*[-–—]\s*(\d+)', text)
+        if range_match:
+            start = int(range_match.group(1))
+            end = int(range_match.group(2))
+            for num in range(start, end + 1):
+                numbers.append(str(num))
+            return list(set(numbers))
+
+        # Try learned separators
+        if self.patterns["number_separators"]:
+            # Sort by frequency (most common first)
+            separators = sorted(
+                self.patterns["number_separators"].items(),
+                key=lambda x: x[1],
+                reverse=True
+            )
+            for separator, _ in separators:
+                if separator in text:
+                    # Try splitting by this separator
+                    parts = re.split(re.escape(separator), text)
+                    for part in parts:
+                        match = re.search(r'(\d+)', part)
+                        if match:
+                            num = match.group(1)
+                            if len(num) <= 3:
+                                numbers.append(num)
+                    if numbers:
+                        return list(set(numbers))
+
+        # Generic fallback: extract all numbers <= 3 digits
+        matches = re.findall(r'(\d+)', text)
+        for num in matches:
+            if len(num) <= 3:
+                numbers.append(num)
+
+        return list(set(numbers))
+
+
 class AdaptiveTokenizer:
     """Breaks service areas into meaningful tokens."""
+
+    def __init__(self, format_learner: Optional['FormatLearner'] = None):
+        """Initialize with optional format learner."""
+        self.format_learner = format_learner or FormatLearner()
 
     @staticmethod
     def _extract_apartment_numbers(part: str) -> List[str]:
@@ -853,6 +948,10 @@ class AdaptiveTokenizer:
 class SegmentParser:
     """Extracts meaning from individual segments."""
 
+    def __init__(self, format_learner: Optional['FormatLearner'] = None):
+        """Initialize with optional format learner."""
+        self.format_learner = format_learner or FormatLearner()
+
     def parse_segment(self, segment: str) -> Dict:
         """
         Parse a service area segment.
@@ -896,30 +995,38 @@ class SegmentParser:
         return {"type": "UNKNOWN", "value": segment, "confidence": 0.0}
 
     def _extract_numbers(self, part: str) -> List[str]:
-        """Extract numbers from a mixed content part."""
-        return AdaptiveTokenizer._extract_apartment_numbers(part)
+        """Extract numbers from a mixed content part using learned patterns."""
+        return self.format_learner.extract_numbers(part)
 
 
 class AdaptiveMatcher:
-    """Matches properties to service areas intelligently."""
+    """Matches properties to service areas intelligently with learned patterns."""
 
-    def __init__(self):
+    def __init__(self, format_learner: Optional['FormatLearner'] = None):
         """Initialize the adaptive matcher."""
-        self.tokenizer = AdaptiveTokenizer()
-        self.parser = SegmentParser()
+        self.format_learner = format_learner or FormatLearner()
+        self.tokenizer = AdaptiveTokenizer(self.format_learner)
+        self.parser = SegmentParser(self.format_learner)
         self.learned_patterns = {}
 
     def extract_patterns(self, service_areas: List[str]) -> Dict:
         """
         Learn common patterns from all service areas.
 
+        Teaches the format learner about number separators and range patterns.
+
         Returns dictionary of discovered patterns.
         """
+        # Let format learner analyze all service areas
+        self.format_learner.learn_from_service_areas(service_areas)
+
         patterns = {
             "formats": {},
             "delimiters": {},
             "street_types": set(),
-            "postal_patterns": []
+            "postal_patterns": [],
+            "learned_separators": self.format_learner.patterns["number_separators"],
+            "learned_ranges": len(self.format_learner.patterns["range_patterns"])
         }
 
         for area in service_areas:
@@ -1112,8 +1219,9 @@ class CraftsmanCoverageAnalyzer:
         self.categories = categories
         self.craftsmen = craftsmen
 
-        # Initialize adaptive parser
-        self.adaptive_matcher = AdaptiveMatcher()
+        # Initialize format learner and pass to adaptive matcher
+        self.format_learner = FormatLearner()
+        self.adaptive_matcher = AdaptiveMatcher(self.format_learner)
 
         # Learn patterns from service areas
         all_service_areas = []
@@ -1158,11 +1266,14 @@ class CraftsmanCoverageAnalyzer:
         """
         Extract individual apartment/house numbers from address string.
 
+        Uses learned patterns from service areas to handle format variations.
+
         Handles formats like:
         - "Rautihalde 1/3/5" -> ["1", "3", "5"]
         - "Rautihalde 1-13" -> ["1", "2", ..., "13"]
         - "Rautihalde 1 - 5" -> ["1", "2", "3", "4", "5"]
         - "Rautihalde 1" -> ["1"]
+        - Any other learned separator format
 
         Excludes PLZ codes (4-5 digit numbers) to avoid false matches.
 
@@ -1172,29 +1283,8 @@ class CraftsmanCoverageAnalyzer:
         Returns:
             List of apartment numbers found
         """
-        numbers = []
-
-        # Handle ranges like "1 - 13" or "1-13"
-        range_match = re.search(r'(\d+)\s*-\s*(\d+)', address_str)
-        if range_match:
-            start = int(range_match.group(1))
-            end = int(range_match.group(2))
-            # Generate range (e.g., 1-13 becomes [1,2,3...13])
-            for num in range(start, end + 1):
-                numbers.append(str(num))
-        else:
-            # Find all number sequences
-            matches = re.findall(r'(\d+(?:/\d+)*)', address_str)
-            for match in matches:
-                # Split by slash and add all numbers
-                parts = match.split('/')
-                for num in parts:
-                    # Skip PLZ codes (4-5 digit numbers that stand alone)
-                    # Apartment numbers are typically 1-3 digits
-                    if len(num) <= 3:
-                        numbers.append(num)
-
-        return list(set(numbers))  # Remove duplicates
+        # Use format learner for adaptive number extraction
+        return self.format_learner.extract_numbers(address_str)
 
     def normalize_street_name(self, street: str) -> str:
         """
@@ -1217,11 +1307,13 @@ class CraftsmanCoverageAnalyzer:
         """
         Find all craftsmen that serve this property and category.
 
-        Matches based on:
-        1. Full explicit address match (e.g., "Main Street 101" in service area)
-        2. Same street with matching property number (e.g., property "71" in "St. 65/67/69/71")
-        3. Normalized street match with property number (handles abbreviations)
-        4. Adaptive pattern matching (learns from data structure)
+        Uses adaptive number extraction that learns from all service areas.
+        Street matching logic adapts to handle format variations.
+
+        Matching priorities:
+        1. No service area restriction (craftsman serves everywhere)
+        2. Exact explicit address match in service area
+        3. Same street with matching property number (adaptive number parsing)
 
         Args:
             property_address: Property address (e.g., "Calandastrasse 16 8048")
@@ -1230,8 +1322,8 @@ class CraftsmanCoverageAnalyzer:
         Returns:
             List of craftsmen names that can serve this property/category
         """
-        street_name = self.extract_street_name(property_address)  # "Calandastrasse 16"
-        property_numbers = self.extract_apartment_numbers(property_address)  # ["16"]
+        street_name = self.extract_street_name(property_address)
+        property_numbers = self.extract_apartment_numbers(property_address)
         matching_craftsmen = []
 
         for craftsman_name, craftsman in self.craftsmen.items():
@@ -1246,41 +1338,30 @@ class CraftsmanCoverageAnalyzer:
                 # No service area restriction - serves everywhere
                 serves_property = True
             else:
-                # Check service areas
+                # Check each service area
                 for service_area in craftsman.service_areas_plz:
                     # PRIORITY 1: Exact explicit address match
-                    # E.g., "Calandastrasse 16" exactly in service area
                     if street_name in service_area or service_area in street_name:
                         serves_property = True
                         break
 
-                    # PRIORITY 2: Same street with matching property number
+                    # PRIORITY 2: Street + learned number matching
                     # Extract just the street name (without any numbers)
                     property_street_only = re.sub(r'\s+\d+.*$', '', street_name).strip()
 
-                    # Try each street segment in the service area
-                    # Handle multi-street formats like "Baslerstr. 127/129/131/133 / Calandastr. 16/18"
-                    # And formats like "Zürcherstr. 65 / 67 / 69 / 71" where later segments are just numbers
-                    # Split on " / " first (street separator), not all "/"
+                    # Handle multi-street formats with adaptive parsing
                     service_segments = [s.strip() for s in service_area.split(" / ")]
-
-                    # Track the last street name found (for number-only segments)
                     last_street_name = None
 
                     for segment in service_segments:
-                        # Handle segments that may contain multiple streets: "Mühlez. 56/Albisr. 261/263/265"
-                        # Try each "/" separated part
                         slash_parts = segment.split("/")
                         for slash_part in slash_parts:
                             service_street_part = slash_part.split(",")[0].strip()
-                            # Remove trailing numbers (handle "Badenerstr.717" and "Badenerstr. 717")
                             service_street_only = re.sub(r'[\s.]*\d+.*$', '', service_street_part).strip()
 
-                            # If this segment has no street name but previous one did, use last known street
                             if not service_street_only and last_street_name:
                                 service_street_only = last_street_name
                             elif service_street_only:
-                                # Update last known street for next iteration
                                 last_street_name = service_street_only
 
                             # Try exact match first
@@ -1288,25 +1369,23 @@ class CraftsmanCoverageAnalyzer:
                                 service_street_only.lower() == property_street_only.lower()
                             ) if service_street_only else False
 
-                            # If no exact match, try normalized match (handles abbreviations)
+                            # If no exact match, try normalized match
                             if not street_match and service_street_only:
                                 normalized_property = self.normalize_street_name(property_street_only)
                                 normalized_service = self.normalize_street_name(service_street_only)
                                 street_match = (normalized_property == normalized_service)
 
-                            # If still no match, try prefix matching (handles custom abbreviations like "Albisr" for "Albisriederstr")
+                            # Try prefix matching for abbreviations
                             if not street_match and service_street_only:
                                 normalized_property = self.normalize_street_name(property_street_only)
                                 normalized_service = self.normalize_street_name(service_street_only)
-                                # Check if one is a prefix of the other (minimum 4 chars to avoid false positives)
                                 if len(normalized_service) >= 4 and len(normalized_property) >= 4:
                                     street_match = (normalized_property.startswith(normalized_service) or
                                                    normalized_service.startswith(normalized_property))
 
                             if street_match and property_numbers:
-                                # Extract numbers from the entire segment for this match
+                                # Use adaptive number extraction
                                 service_numbers = self.extract_apartment_numbers(segment)
-                                # Check if property number is in service area numbers
                                 if service_numbers and any(pn in service_numbers for pn in property_numbers):
                                     serves_property = True
                                     break
@@ -1316,16 +1395,6 @@ class CraftsmanCoverageAnalyzer:
 
                     if serves_property:
                         break
-
-                    # PRIORITY 3: Adaptive pattern matching (fallback)
-                    # Try adaptive matcher if existing logic didn't find a match
-                    if not serves_property:
-                        adaptive_result = self.adaptive_matcher.match_property(
-                            property_address, service_area
-                        )
-                        if adaptive_result.get("matched"):
-                            serves_property = True
-                            break
 
             if serves_property:
                 matching_craftsmen.append(craftsman_name)
