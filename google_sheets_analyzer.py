@@ -949,9 +949,9 @@ class CraftsmanCoverageAnalyzer:
 
     def normalize_street_name(self, street: str) -> str:
         """
-        Normalize street name to handle abbreviations.
+        Normalize street name to handle abbreviations and spacing.
 
-        Handles: Calandastrasse vs Calandastr., Strasse vs Str., etc.
+        Handles: Calandastrasse vs Calandastr., Badenerstr. vs Badenerstr, spaces, etc.
 
         Args:
             street: Street name to normalize
@@ -962,8 +962,9 @@ class CraftsmanCoverageAnalyzer:
         import re
         # Normalize common German street suffixes
         normalized = street.lower().strip()
-        # Remove periods first
+        # Remove periods and extra spaces
         normalized = re.sub(r'\.', '', normalized)
+        normalized = re.sub(r'\s+', '', normalized)  # Remove all spaces
         # Replace full forms with abbreviations
         # "strasse" or "straße" → "str" (even in compound words like calandastrasse)
         normalized = re.sub(r'strasse$|straße$', 'str', normalized)
@@ -1024,7 +1025,8 @@ class CraftsmanCoverageAnalyzer:
 
                     for segment in service_segments:
                         service_street_part = segment.split("/")[0].split(",")[0].strip()
-                        service_street_only = re.sub(r'\s+\d+.*$', '', service_street_part).strip()
+                        # Remove trailing numbers (handle "Badenerstr.717" and "Badenerstr. 717")
+                        service_street_only = re.sub(r'[\s.]*\d+.*$', '', service_street_part).strip()
 
                         # Try exact match first
                         street_match = (
