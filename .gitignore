@@ -20,9 +20,13 @@ Thumbs.db
 dist/
 build/
 
-# Reports in root (should only be in output/)
-craftsman_coverage_report.json
-craftsman_coverage_report.csv
+# User data (do not commit)
+input/*.csv
+input/.DS_Store
+
+# Generated reports (do not commit)
+output/*.json
+output/*.csv
 
 # Credentials
 credentials.json
