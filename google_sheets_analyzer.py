@@ -1078,10 +1078,11 @@ class AdaptiveMatcher:
 
     @staticmethod
     def _normalize_street(street: str) -> str:
-        """Normalize street name: handle abbreviations and spacing."""
+        """Normalize street name: handle abbreviations, spacing, and hyphens."""
         normalized = street.lower().strip()
-        normalized = re.sub(r'\.', '', normalized)
-        normalized = re.sub(r'\s+', '', normalized)
+        normalized = re.sub(r'\.', '', normalized)  # Remove periods
+        normalized = re.sub(r'\s+', '', normalized)  # Remove spaces
+        normalized = re.sub(r'-', '', normalized)    # Remove hyphens (e.g., "Wille-Str" → "Willestr")
         normalized = re.sub(r'strasse$|straße$', 'str', normalized)
         return normalized
 
