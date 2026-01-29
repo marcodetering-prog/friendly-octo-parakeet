@@ -791,9 +791,22 @@ class FormatLearner:
             start, end = int(range_match.group(1)), int(range_match.group(2))
             return [str(n) for n in range(start, end + 1)]
 
-        # Try learned separators (sorted by frequency)
+        # PRIORITY: Try '/' first (apartment number separator within an address)
+        # e.g., "Holeoholzweg 61/63/65/67" - we want all four numbers
+        if '/' in text:
+            numbers = []
+            for part in re.split(r'/', text):
+                # Extract ALL numbers from each part (not just the first one)
+                matches = re.findall(r'(\d+)', part)
+                for match in matches:
+                    if len(match) <= 3:
+                        numbers.append(match)
+            if numbers:
+                return list(set(numbers))
+
+        # Try other learned separators (sorted by frequency)
         for separator, _ in sorted(self.number_separators.items(), key=lambda x: x[1], reverse=True):
-            if separator in text:
+            if separator in text and separator != '/':  # Skip '/' since we already tried it
                 numbers = []
                 for part in re.split(re.escape(separator), text):
                     match = re.search(r'(\d+)', part)
