@@ -953,13 +953,8 @@ class CraftsmanCoverageAnalyzer:
         """
         Find all craftsmen that serve this property and category.
 
-        Matching priority (in order):
-        1. Explicit address match - property street+number in service area
-        2. Apartment number match - property number matches service area numbers
-        3. Full address match - property address in service area
-
-        Note: Craftsmen always have explicit addresses in service areas.
-        PLZ-only matching is not used to allow granular address-level control.
+        Uses explicit address matching: the property address (street + number)
+        must appear in the craftsman's service areas.
 
         Args:
             property_address: Property address (e.g., "Main Street 101 10001")
@@ -969,7 +964,6 @@ class CraftsmanCoverageAnalyzer:
             List of craftsmen names that can serve this property/category
         """
         street_name = self.extract_street_name(property_address)  # "Main Street 101"
-        property_numbers = self.extract_apartment_numbers(property_address)
         matching_craftsmen = []
 
         for craftsman_name, craftsman in self.craftsmen.items():
@@ -984,30 +978,12 @@ class CraftsmanCoverageAnalyzer:
                 # No service area restriction - serves everywhere
                 serves_property = True
             else:
-                # PRIORITY 1: Check for explicit address match
-                # E.g., "Main Street 101" should match service areas containing it
+                # Check for explicit address match
+                # E.g., "Main Street 101" must match service areas containing it
                 for service_area in craftsman.service_areas_plz:
                     if street_name in service_area or service_area in street_name:
                         serves_property = True
                         break
-
-                # PRIORITY 2: Check apartment number matching
-                # E.g., property number "101" matches "Main Street 101/102"
-                if not serves_property and property_numbers:
-                    for service_area in craftsman.service_areas_plz:
-                        service_numbers = self.extract_apartment_numbers(service_area)
-                        if service_numbers and any(prop_num in service_numbers for prop_num in property_numbers):
-                            serves_property = True
-                            break
-
-                # PRIORITY 3: Check if full property address is in service area
-                if not serves_property:
-                    for service_area in craftsman.service_areas_plz:
-                        if (property_address in service_area or
-                            property_address.strip() in service_area or
-                            service_area in property_address):
-                            serves_property = True
-                            break
 
             if serves_property:
                 matching_craftsmen.append(craftsman_name)
