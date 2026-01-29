@@ -273,12 +273,8 @@ class GoogleSheetsDataSource(DataSource):
                 # Extract service areas
                 service_areas = []
                 if len(row) > plz_col and row[plz_col]:
-                    # Parse comma-separated PLZ codes
-                    service_areas = [
-                        plz.strip()
-                        for plz in row[plz_col].split(",")
-                        if plz.strip()
-                    ]
+                    # Parse service areas, reconstructing full addresses from split pieces
+                    service_areas = self._parse_service_areas(row[plz_col])
 
                 # Extract categories (TRUE/checkmark values)
                 categories = []
@@ -488,6 +484,54 @@ class CSVDataSource(DataSource):
         with open(filepath, "r", encoding="utf-8") as f:
             return f.readlines()
 
+    def _parse_service_areas(self, service_area_str: str) -> List[str]:
+        """
+        Parse service areas from a comma-separated string, reconstructing full addresses.
+
+        Handles formats like:
+        - "Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich"
+        - "Badenerstr.717/Im Struppen 8, 8048 Zürich"
+
+        Returns:
+            List of reconstructed full addresses (e.g., ["Im Struppen (various), 8048 Zürich"])
+        """
+        import re
+
+        if not service_area_str or not service_area_str.strip():
+            return []
+
+        pieces = [p.strip() for p in service_area_str.split(",") if p.strip()]
+        if not pieces:
+            return []
+
+        # Find postal code pieces (format: XXXX City or similar)
+        postal_code_pattern = re.compile(r'^\d{4,5}\s+')
+
+        # Group pieces by postal code
+        addresses = []
+        current_streets = []
+
+        for piece in pieces:
+            if postal_code_pattern.match(piece):
+                # This is a postal code + city
+                if current_streets:
+                    # Combine streets with this postal code
+                    full_address = ", ".join(current_streets) + ", " + piece
+                    addresses.append(full_address)
+                    current_streets = []
+                else:
+                    # Postal code alone (shouldn't happen but handle it)
+                    addresses.append(piece)
+            else:
+                # This is a street/address piece
+                current_streets.append(piece)
+
+        # Handle remaining streets without postal code
+        if current_streets:
+            addresses.append(", ".join(current_streets))
+
+        return addresses if addresses else [service_area_str]
+
     def fetch_properties(self) -> List[str]:
         """
         Fetch properties from CSV file.
@@ -677,11 +721,7 @@ class CSVDataSource(DataSource):
                 if plz_col:
                     plz_value = row.get(plz_col, "").strip()
                     if plz_value:
-                        service_areas = [
-                            area.strip()
-                            for area in plz_value.split(",")
-                            if area.strip()
-                        ]
+                        service_areas = self._parse_service_areas(plz_value)
 
                 # Extract categories (columns marked as TRUE/X/✓)
                 categories = []
