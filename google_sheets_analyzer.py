@@ -923,21 +923,32 @@ class CraftsmanCoverageAnalyzer:
 
                     # Try each street segment in the service area
                     # Handle multi-street formats like "Baslerstr. 127/129/131/133 / Calandastr. 16/18"
+                    # And formats like "Zürcherstr. 65 / 67 / 69 / 71" where later segments are just numbers
                     # Split on " / " first (street separator), not all "/"
                     service_segments = [s.strip() for s in service_area.split(" / ")]
+
+                    # Track the last street name found (for number-only segments)
+                    last_street_name = None
 
                     for segment in service_segments:
                         service_street_part = segment.split("/")[0].split(",")[0].strip()
                         # Remove trailing numbers (handle "Badenerstr.717" and "Badenerstr. 717")
                         service_street_only = re.sub(r'[\s.]*\d+.*$', '', service_street_part).strip()
 
+                        # If this segment has no street name but previous one did, use last known street
+                        if not service_street_only and last_street_name:
+                            service_street_only = last_street_name
+                        elif service_street_only:
+                            # Update last known street for next iteration
+                            last_street_name = service_street_only
+
                         # Try exact match first
                         street_match = (
                             service_street_only.lower() == property_street_only.lower()
-                        )
+                        ) if service_street_only else False
 
                         # If no exact match, try normalized match (handles abbreviations)
-                        if not street_match:
+                        if not street_match and service_street_only:
                             normalized_property = self.normalize_street_name(property_street_only)
                             normalized_service = self.normalize_street_name(service_street_only)
                             street_match = (normalized_property == normalized_service)
