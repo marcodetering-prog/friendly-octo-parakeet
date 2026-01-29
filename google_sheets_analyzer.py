@@ -768,6 +768,16 @@ class CSVDataSource(DataSource):
 class AdaptiveTokenizer:
     """Breaks service areas into meaningful tokens."""
 
+    @staticmethod
+    def _extract_apartment_numbers(part: str) -> List[str]:
+        """Extract apartment numbers from a mixed content part."""
+        numbers = []
+        matches = re.findall(r'(\d+)', part)
+        for num in matches:
+            if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
+                numbers.append(num)
+        return list(set(numbers))  # Remove duplicates
+
     def tokenize(self, text: str) -> List[Dict]:
         """
         Tokenize a service area string into meaningful tokens.
@@ -778,13 +788,10 @@ class AdaptiveTokenizer:
             return []
 
         tokens = []
-        # Split by common delimiters: " / ", ",", and space
-        # But preserve structure
         parts = []
 
-        # First split by " / " (main street separator)
+        # Split by " / " then by comma
         for segment in text.split(" / "):
-            # Then split by comma
             for subsegment in segment.split(","):
                 subsegment = subsegment.strip()
                 if subsegment:
@@ -799,17 +806,14 @@ class AdaptiveTokenizer:
         """Tokenize a single part (street or numbers)."""
         tokens = []
 
-        # Split by slash for number ranges
+        # Pure number range like "1/3/5"
         if "/" in part and not any(c.isalpha() for c in part.split("/")[0]):
-            # Pure number range like "1/3/5"
-            numbers = part.split("/")
-            for num in numbers:
+            for num in part.split("/"):
                 num = num.strip()
                 if num.isdigit():
                     tokens.append({"type": "NUMBER", "value": num})
         else:
             # Mixed content: street with numbers or just street
-            # Try to separate street from numbers
             match = re.match(r'^(.*?)[\s.]*(\d+.*)$', part)
             if match:
                 street_part = match.group(1).strip()
@@ -818,13 +822,12 @@ class AdaptiveTokenizer:
                 if street_part:
                     tokens.append({"type": "STREET", "value": street_part})
 
-                # Extract numbers from number_part
-                number_tokens = self._extract_numbers_from_part(number_part)
-                tokens.extend(number_tokens)
+                # Extract numbers using shared method
+                for num in self._extract_apartment_numbers(number_part):
+                    tokens.append({"type": "NUMBER", "value": num})
             else:
                 # No numbers, just text
                 if part:
-                    # Check if it's a postal code
                     if re.match(r'^\d{4,5}\s+', part):
                         tokens.append({"type": "POSTAL", "value": part})
                     elif re.match(r'^[A-Z]', part):
@@ -832,16 +835,6 @@ class AdaptiveTokenizer:
                     else:
                         tokens.append({"type": "STREET", "value": part})
 
-        return tokens
-
-    def _extract_numbers_from_part(self, part: str) -> List[Dict]:
-        """Extract numbers from a part containing mixed content."""
-        tokens = []
-        # Find all numbers separated by slashes or standalone
-        matches = re.findall(r'(\d+)', part)
-        for num in matches:
-            if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
-                tokens.append({"type": "NUMBER", "value": num})
         return tokens
 
 
@@ -892,12 +885,7 @@ class SegmentParser:
 
     def _extract_numbers(self, part: str) -> List[str]:
         """Extract numbers from a mixed content part."""
-        numbers = []
-        matches = re.findall(r'(\d+)', part)
-        for num in matches:
-            if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
-                numbers.append(num)
-        return list(set(numbers))  # Remove duplicates
+        return AdaptiveTokenizer._extract_apartment_numbers(part)
 
 
 class AdaptiveMatcher:
@@ -1071,15 +1059,14 @@ class AdaptiveMatcher:
         """Check if two street names match (with normalization)."""
         if not street1 or not street2:
             return False
-
-        # Normalize both
+        # Normalize both using shared utility
         norm1 = self._normalize_street(street1)
         norm2 = self._normalize_street(street2)
-
         return norm1 == norm2
 
-    def _normalize_street(self, street: str) -> str:
-        """Normalize a street name."""
+    @staticmethod
+    def _normalize_street(street: str) -> str:
+        """Normalize street name: handle abbreviations and spacing."""
         normalized = street.lower().strip()
         normalized = re.sub(r'\.', '', normalized)
         normalized = re.sub(r'\s+', '', normalized)
@@ -1199,16 +1186,8 @@ class CraftsmanCoverageAnalyzer:
         Returns:
             Normalized street name
         """
-        import re
-        # Normalize common German street suffixes
-        normalized = street.lower().strip()
-        # Remove periods and extra spaces
-        normalized = re.sub(r'\.', '', normalized)
-        normalized = re.sub(r'\s+', '', normalized)  # Remove all spaces
-        # Replace full forms with abbreviations
-        # "strasse" or "straße" → "str" (even in compound words like calandastrasse)
-        normalized = re.sub(r'strasse$|straße$', 'str', normalized)
-        return normalized
+        # Use shared normalization from adaptive matcher
+        return AdaptiveMatcher._normalize_street(street)
 
     def find_craftsmen_for_property_and_category(
         self, property_address: str, category: str
