@@ -27,6 +27,7 @@ input/.DS_Store
 # Generated reports (do not commit)
 output/*.json
 output/*.csv
+output/*.html
 
 # Credentials
 credentials.json
