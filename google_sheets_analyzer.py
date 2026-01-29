@@ -1270,14 +1270,35 @@ class CraftsmanCoverageAnalyzer:
 
                     # Handle multi-street formats with adaptive parsing
                     # First split by " / " (space-slash-space for multi-street properties)
+                    # Then split by "/" (when it separates street names vs. numbers)
                     # Then split by "," (comma for comma-separated properties within a street)
                     service_segments = []
                     for main_segment in service_area.split(" / "):
-                        # Further split by comma to handle addresses like "Street1 nums, Street2 nums"
-                        for sub_segment in main_segment.split(","):
-                            sub_segment = sub_segment.strip()
-                            if sub_segment and not re.match(r'^\d{4,5}\s+', sub_segment):  # Skip postal codes
-                                service_segments.append(sub_segment)
+                        # Intelligently split by "/" - if next part starts with letter, it's a new street
+                        slash_parts = main_segment.split("/")
+                        reconstructed = []
+                        current = ""
+                        for part in slash_parts:
+                            part = part.strip()
+                            if part and part[0].isalpha() and current:
+                                # New street detected, save previous and start new
+                                reconstructed.append(current)
+                                current = part
+                            else:
+                                # Continue with numbers or first street
+                                if current:
+                                    current += "/" + part
+                                else:
+                                    current = part
+                        if current:
+                            reconstructed.append(current)
+
+                        # Now split by comma to handle addresses like "Street1 nums, Street2 nums"
+                        for sub_segment in (reconstructed if reconstructed else [main_segment]):
+                            for comma_part in sub_segment.split(","):
+                                comma_part = comma_part.strip()
+                                if comma_part and not re.match(r'^\d{4,5}\s+', comma_part):  # Skip postal codes
+                                    service_segments.append(comma_part)
 
                     last_street_name = None
 
