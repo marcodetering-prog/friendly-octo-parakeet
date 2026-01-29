@@ -766,94 +766,44 @@ class CSVDataSource(DataSource):
 # ============================================================================
 
 class FormatLearner:
-    """Learns number patterns from service areas for format-agnostic extraction."""
+    """Learns number separators from service areas for format-agnostic extraction."""
 
     def __init__(self):
-        """Initialize the format learner."""
-        self.patterns = {
-            "number_separators": {},  # Learned delimiters between numbers
-            "range_patterns": [],      # Learned range patterns
-            "prefix_patterns": {},     # Learned prefixes before numbers
-            "suffix_patterns": {}      # Learned suffixes after numbers
-        }
+        """Initialize with empty separator patterns."""
+        self.number_separators = {}
 
     def learn_from_service_areas(self, service_areas: List[str]) -> None:
-        """
-        Analyze service areas to learn number extraction patterns.
-
-        Args:
-            service_areas: List of service area strings
-        """
+        """Learn number separators from all service areas."""
         for area in service_areas:
-            self._analyze_area(area)
-
-    def _analyze_area(self, area: str) -> None:
-        """Analyze a single service area to extract patterns."""
-        # Find sequences of numbers and what separates them
-        number_sequences = re.findall(r'(\d+(?:[^\d\w]+\d+)*)', area)
-
-        for seq in number_sequences:
-            # Detect separators between numbers
-            separators = re.findall(r'\d+([^\d\w]+)(?=\d)', seq)
-            for sep in separators:
-                self.patterns["number_separators"][sep] = self.patterns["number_separators"].get(sep, 0) + 1
-
-            # Detect range patterns (e.g., "1-13", "1 - 13")
-            if re.search(r'\d+\s*[-–—]\s*\d+', seq):
-                self.patterns["range_patterns"].append(seq)
+            # Find sequences of numbers and what separates them
+            number_sequences = re.findall(r'(\d+(?:[^\d\w]+\d+)*)', area)
+            for seq in number_sequences:
+                # Detect separators between numbers
+                separators = re.findall(r'\d+([^\d\w]+)(?=\d)', seq)
+                for sep in separators:
+                    self.number_separators[sep] = self.number_separators.get(sep, 0) + 1
 
     def extract_numbers(self, text: str) -> List[str]:
-        """
-        Extract apartment numbers using learned patterns.
-
-        Falls back to generic extraction if no patterns are recognized.
-
-        Args:
-            text: Text potentially containing apartment numbers
-
-        Returns:
-            List of extracted apartment numbers
-        """
-        numbers = []
-
-        # Try range pattern first (works for any range format)
-        # Handle patterns like "1-13", "1 - 13", "1–13" (with em-dash)
+        """Extract apartment numbers using learned patterns with fallback."""
+        # Try range pattern first (handles 1-13, 1 - 13, 1–13, etc.)
         range_match = re.search(r'(\d+)\s*[-–—]\s*(\d+)', text)
         if range_match:
-            start = int(range_match.group(1))
-            end = int(range_match.group(2))
-            for num in range(start, end + 1):
-                numbers.append(str(num))
-            return list(set(numbers))
+            start, end = int(range_match.group(1)), int(range_match.group(2))
+            return [str(n) for n in range(start, end + 1)]
 
-        # Try learned separators
-        if self.patterns["number_separators"]:
-            # Sort by frequency (most common first)
-            separators = sorted(
-                self.patterns["number_separators"].items(),
-                key=lambda x: x[1],
-                reverse=True
-            )
-            for separator, _ in separators:
-                if separator in text:
-                    # Try splitting by this separator
-                    parts = re.split(re.escape(separator), text)
-                    for part in parts:
-                        match = re.search(r'(\d+)', part)
-                        if match:
-                            num = match.group(1)
-                            if len(num) <= 3:
-                                numbers.append(num)
-                    if numbers:
-                        return list(set(numbers))
+        # Try learned separators (sorted by frequency)
+        for separator, _ in sorted(self.number_separators.items(), key=lambda x: x[1], reverse=True):
+            if separator in text:
+                numbers = []
+                for part in re.split(re.escape(separator), text):
+                    match = re.search(r'(\d+)', part)
+                    if match and len(match.group(1)) <= 3:
+                        numbers.append(match.group(1))
+                if numbers:
+                    return list(set(numbers))
 
-        # Generic fallback: extract all numbers <= 3 digits
-        matches = re.findall(r'(\d+)', text)
-        for num in matches:
-            if len(num) <= 3:
-                numbers.append(num)
-
-        return list(set(numbers))
+        # Generic fallback: all numbers <= 3 digits
+        return list(set(n for n in re.findall(r'(\d+)', text) if len(n) <= 3))
 
 
 class AdaptiveTokenizer:
@@ -862,28 +812,6 @@ class AdaptiveTokenizer:
     def __init__(self, format_learner: Optional['FormatLearner'] = None):
         """Initialize with optional format learner."""
         self.format_learner = format_learner or FormatLearner()
-
-    @staticmethod
-    def _extract_apartment_numbers(part: str) -> List[str]:
-        """Extract apartment numbers from a mixed content part, including ranges."""
-        numbers = []
-
-        # Handle ranges like "1 - 13" or "1-13"
-        range_match = re.search(r'(\d+)\s*-\s*(\d+)', part)
-        if range_match:
-            start = int(range_match.group(1))
-            end = int(range_match.group(2))
-            # Generate range (e.g., 1-13 becomes [1,2,3...13])
-            for num in range(start, end + 1):
-                numbers.append(str(num))
-        else:
-            # Extract individual numbers
-            matches = re.findall(r'(\d+)', part)
-            for num in matches:
-                if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
-                    numbers.append(num)
-
-        return list(set(numbers))  # Remove duplicates
 
     def tokenize(self, text: str) -> List[Dict]:
         """
@@ -916,31 +844,24 @@ class AdaptiveTokenizer:
         # Pure number range like "1/3/5"
         if "/" in part and not any(c.isalpha() for c in part.split("/")[0]):
             for num in part.split("/"):
-                num = num.strip()
-                if num.isdigit():
-                    tokens.append({"type": "NUMBER", "value": num})
+                if num.strip().isdigit():
+                    tokens.append({"type": "NUMBER", "value": num.strip()})
         else:
             # Mixed content: street with numbers or just street
             match = re.match(r'^(.*?)[\s.]*(\d+.*)$', part)
             if match:
                 street_part = match.group(1).strip()
-                number_part = match.group(2)
-
                 if street_part:
                     tokens.append({"type": "STREET", "value": street_part})
-
-                # Extract numbers using shared method
-                for num in self._extract_apartment_numbers(number_part):
+                for num in self.format_learner.extract_numbers(match.group(2)):
                     tokens.append({"type": "NUMBER", "value": num})
-            else:
-                # No numbers, just text
-                if part:
-                    if re.match(r'^\d{4,5}\s+', part):
-                        tokens.append({"type": "POSTAL", "value": part})
-                    elif re.match(r'^[A-Z]', part):
-                        tokens.append({"type": "CITY", "value": part})
-                    else:
-                        tokens.append({"type": "STREET", "value": part})
+            elif part:
+                if re.match(r'^\d{4,5}\s+', part):
+                    tokens.append({"type": "POSTAL", "value": part})
+                elif re.match(r'^[A-Z]', part):
+                    tokens.append({"type": "CITY", "value": part})
+                else:
+                    tokens.append({"type": "STREET", "value": part})
 
         return tokens
 
@@ -1007,41 +928,10 @@ class AdaptiveMatcher:
         self.format_learner = format_learner or FormatLearner()
         self.tokenizer = AdaptiveTokenizer(self.format_learner)
         self.parser = SegmentParser(self.format_learner)
-        self.learned_patterns = {}
 
-    def extract_patterns(self, service_areas: List[str]) -> Dict:
-        """
-        Learn common patterns from all service areas.
-
-        Teaches the format learner about number separators and range patterns.
-
-        Returns dictionary of discovered patterns.
-        """
-        # Let format learner analyze all service areas
+    def extract_patterns(self, service_areas: List[str]) -> None:
+        """Learn separators and patterns from all service areas."""
         self.format_learner.learn_from_service_areas(service_areas)
-
-        patterns = {
-            "formats": {},
-            "delimiters": {},
-            "street_types": set(),
-            "postal_patterns": [],
-            "learned_separators": self.format_learner.patterns["number_separators"],
-            "learned_ranges": len(self.format_learner.patterns["range_patterns"])
-        }
-
-        for area in service_areas:
-            # Analyze format
-            format_key = self._detect_format(area)
-            patterns["formats"][format_key] = patterns["formats"].get(format_key, 0) + 1
-
-            # Detect delimiters
-            if " / " in area:
-                patterns["delimiters"][" / "] = patterns["delimiters"].get(" / ", 0) + 1
-            if "," in area:
-                patterns["delimiters"][","] = patterns["delimiters"].get(",", 0) + 1
-
-        self.learned_patterns = patterns
-        return patterns
 
     def _detect_format(self, area: str) -> str:
         """Detect the format of a service area."""
