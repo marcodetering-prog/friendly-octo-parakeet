@@ -933,6 +933,68 @@ class CraftsmanCoverageAnalyzer:
         """
         return [self.analyze_property(prop) for prop in self.properties]
 
+    def find_missing_properties(self) -> Dict[str, List[str]]:
+        """
+        Find addresses that craftsmen serve but aren't in the properties list.
+
+        Returns:
+            Dictionary mapping address to list of craftsmen that serve it
+        """
+        missing_by_address = {}
+
+        for craftsman_name, craftsman in self.craftsmen.items():
+            if not craftsman.service_areas_plz:
+                continue
+
+            for service_area in craftsman.service_areas_plz:
+                # Check if this service area matches any property
+                area_matches_property = False
+
+                for prop in self.properties:
+                    # Try all three matching priorities used in coverage analysis
+                    prop_street = self.extract_street_name(prop)
+
+                    # Priority 1: Explicit address match
+                    if prop_street in service_area or service_area in prop_street:
+                        area_matches_property = True
+                        break
+
+                    # Priority 2: Apartment number match
+                    if not area_matches_property:
+                        prop_numbers = self.extract_apartment_numbers(prop)
+                        area_numbers = self.extract_apartment_numbers(service_area)
+                        if prop_numbers and area_numbers and any(
+                            pn in area_numbers for pn in prop_numbers
+                        ):
+                            area_matches_property = True
+                            break
+
+                    # Priority 3: Full address match
+                    if not area_matches_property:
+                        if (prop in service_area or prop.strip() in service_area or
+                            service_area in prop):
+                            area_matches_property = True
+                            break
+
+                # If service area is a complete address (not just a PLZ), add to missing
+                if not area_matches_property:
+                    # Only include if it looks like an address (contains street name or numbers)
+                    service_lower = service_area.lower().strip()
+                    # Check if it's NOT just a PLZ code
+                    is_just_plz = len(service_lower) <= 5 and service_lower.isdigit()
+
+                    if not is_just_plz:
+                        # Add this craftsman to the missing address
+                        if service_area not in missing_by_address:
+                            missing_by_address[service_area] = []
+                        missing_by_address[service_area].append(craftsman_name)
+
+        # Sort craftsmen names for each address
+        for address in missing_by_address:
+            missing_by_address[address] = sorted(missing_by_address[address])
+
+        return missing_by_address
+
     def find_unmatched_service_areas(self) -> Dict[str, List[str]]:
         """
         Find service areas in craftsmen that don't match any property.
@@ -1047,6 +1109,7 @@ class ReportGenerator:
         analyses: List[PropertyCoverageAnalysis],
         summary: CoverageSummary,
         unmatched_areas: Dict[str, List[str]] = None,
+        missing_properties: Dict[str, List[str]] = None,
     ) -> str:
         """
         Generate JSON report.
@@ -1055,6 +1118,7 @@ class ReportGenerator:
             analyses: List of PropertyCoverageAnalysis objects
             summary: CoverageSummary object
             unmatched_areas: Dictionary of unmatched service areas
+            missing_properties: Dictionary of addresses craftsmen serve but not in properties list
 
         Returns:
             JSON string
@@ -1102,6 +1166,7 @@ class ReportGenerator:
                 for analysis in sorted(analyses, key=lambda x: x.property_name)
             ],
             "unmatched_service_areas": unmatched_areas or {},
+            "missing_properties": missing_properties or {},
         }
         return json.dumps(report, indent=2, ensure_ascii=False)
 
@@ -1141,6 +1206,7 @@ class ReportGenerator:
         analyses: List[PropertyCoverageAnalysis],
         summary: CoverageSummary,
         unmatched_areas: Dict[str, List[str]] = None,
+        missing_properties: Dict[str, List[str]] = None,
     ) -> str:
         """
         Generate human-readable text report.
@@ -1148,6 +1214,8 @@ class ReportGenerator:
         Args:
             analyses: List of PropertyCoverageAnalysis objects
             summary: CoverageSummary object
+            unmatched_areas: Dictionary of unmatched service areas
+            missing_properties: Dictionary of addresses craftsmen serve but not in properties list
 
         Returns:
             Formatted text report
@@ -1236,6 +1304,19 @@ class ReportGenerator:
                 craftsmen = unmatched_areas[service_area]
                 lines.append(f"\nService Area: {service_area}")
                 lines.append(f"  Craftsmen serving this area: {len(craftsmen)}")
+                for craftsman_name in craftsmen:
+                    lines.append(f"    - {craftsman_name}")
+            lines.append("")
+
+        # Missing properties (addresses craftsmen serve but not in properties list)
+        if missing_properties:
+            lines.append("\nMISSING PROPERTIES:")
+            lines.append("(Addresses with craftsmen assigned but not in properties list)")
+            lines.append("-" * 80)
+            for address in sorted(missing_properties.keys()):
+                craftsmen = missing_properties[address]
+                lines.append(f"\nAddress: {address}")
+                lines.append(f"  Craftsmen serving this address: {len(craftsmen)}")
                 for craftsman_name in craftsmen:
                     lines.append(f"    - {craftsman_name}")
             lines.append("")
@@ -1331,6 +1412,9 @@ def main():
 
         # Find unmatched service areas
         unmatched_areas = analyzer.find_unmatched_service_areas()
+
+        # Find missing properties (addresses craftsmen serve but not in properties list)
+        missing_properties = analyzer.find_missing_properties()
         print("Analysis complete!")
         print("")
 
@@ -1346,13 +1430,13 @@ def main():
 
         # Text report
         text_report = ReportGenerator.generate_text_report(
-            analyses, summary, unmatched_areas
+            analyses, summary, unmatched_areas, missing_properties
         )
         print(text_report)
 
         # Save JSON report
         json_report = ReportGenerator.generate_json_report(
-            analyses, summary, unmatched_areas
+            analyses, summary, unmatched_areas, missing_properties
         )
         json_path = output_dir / f"craftsman_coverage_report_{timestamp}.json"
         with open(json_path, "w", encoding="utf-8") as f:
