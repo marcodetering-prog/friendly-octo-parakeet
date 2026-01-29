@@ -770,12 +770,24 @@ class AdaptiveTokenizer:
 
     @staticmethod
     def _extract_apartment_numbers(part: str) -> List[str]:
-        """Extract apartment numbers from a mixed content part."""
+        """Extract apartment numbers from a mixed content part, including ranges."""
         numbers = []
-        matches = re.findall(r'(\d+)', part)
-        for num in matches:
-            if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
-                numbers.append(num)
+
+        # Handle ranges like "1 - 13" or "1-13"
+        range_match = re.search(r'(\d+)\s*-\s*(\d+)', part)
+        if range_match:
+            start = int(range_match.group(1))
+            end = int(range_match.group(2))
+            # Generate range (e.g., 1-13 becomes [1,2,3...13])
+            for num in range(start, end + 1):
+                numbers.append(str(num))
+        else:
+            # Extract individual numbers
+            matches = re.findall(r'(\d+)', part)
+            for num in matches:
+                if len(num) <= 3:  # Apartment numbers are typically 1-3 digits
+                    numbers.append(num)
+
         return list(set(numbers))  # Remove duplicates
 
     def tokenize(self, text: str) -> List[Dict]:
@@ -1147,7 +1159,8 @@ class CraftsmanCoverageAnalyzer:
 
         Handles formats like:
         - "Rautihalde 1/3/5" -> ["1", "3", "5"]
-        - "Rautihalde 1-5" -> ["1", "5"]
+        - "Rautihalde 1-13" -> ["1", "2", ..., "13"]
+        - "Rautihalde 1 - 5" -> ["1", "2", "3", "4", "5"]
         - "Rautihalde 1" -> ["1"]
 
         Excludes PLZ codes (4-5 digit numbers) to avoid false matches.
@@ -1158,19 +1171,27 @@ class CraftsmanCoverageAnalyzer:
         Returns:
             List of apartment numbers found
         """
-        import re
         numbers = []
 
-        # Find all number sequences
-        matches = re.findall(r'(\d+(?:/\d+)*)', address_str)
-        for match in matches:
-            # Split by slash and add all numbers
-            parts = match.split('/')
-            for num in parts:
-                # Skip PLZ codes (4-5 digit numbers that stand alone)
-                # Apartment numbers are typically 1-3 digits
-                if len(num) <= 3:
-                    numbers.append(num)
+        # Handle ranges like "1 - 13" or "1-13"
+        range_match = re.search(r'(\d+)\s*-\s*(\d+)', address_str)
+        if range_match:
+            start = int(range_match.group(1))
+            end = int(range_match.group(2))
+            # Generate range (e.g., 1-13 becomes [1,2,3...13])
+            for num in range(start, end + 1):
+                numbers.append(str(num))
+        else:
+            # Find all number sequences
+            matches = re.findall(r'(\d+(?:/\d+)*)', address_str)
+            for match in matches:
+                # Split by slash and add all numbers
+                parts = match.split('/')
+                for num in parts:
+                    # Skip PLZ codes (4-5 digit numbers that stand alone)
+                    # Apartment numbers are typically 1-3 digits
+                    if len(num) <= 3:
+                        numbers.append(num)
 
         return list(set(numbers))  # Remove duplicates
 
