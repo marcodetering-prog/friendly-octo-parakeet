@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  craftsman-analyzer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: craftsman-coverage-analyzer
+    volumes:
+      # Mount input directory for CSV files
+      - ./input:/app/input:ro
+      # Mount output directory for generated reports
+      - ./output:/app/output:rw
+      # Optional: Mount credentials for Google Sheets
+      - ./credentials.json:/app/credentials.json:ro
+    environment:
+      # Optional: Set Python optimization
+      PYTHONOPTIMIZE: "1"
+    working_dir: /app
+    command: python google_sheets_analyzer.py
+    restart: "no"
+    # Optional: Resource limits
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '1'
+    #       memory: 512M
+    #     reservations:
+    #       cpus: '0.5'
+    #       memory: 256M
