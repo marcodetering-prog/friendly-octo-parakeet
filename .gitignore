@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build/Generated files
+*.egg-info/
+dist/
+build/
+
+# Reports in root (should only be in output/)
+craftsman_coverage_report.json
+craftsman_coverage_report.csv
+
+# Credentials
+credentials.json
