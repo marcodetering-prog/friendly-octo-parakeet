@@ -1,5 +1,7 @@
-# No external dependencies required!
-# The analyzer uses Python standard library only:
+# PDF Report Generation
+weasyprint==60.1
+
+# Analyzer uses Python standard library for main functionality:
 # - json: JSON report generation
 # - csv: CSV report generation
 # - dataclasses: Data structures

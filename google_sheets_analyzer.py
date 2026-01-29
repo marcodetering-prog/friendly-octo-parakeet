@@ -1958,6 +1958,36 @@ class ReportGenerator:
         return "\n".join(html_parts)
 
     @staticmethod
+    def generate_pdf_report(
+        analyses: List[PropertyCoverageAnalysis],
+        summary: CoverageSummary,
+    ) -> bytes:
+        """
+        Generate PDF report from HTML using weasyprint.
+
+        Args:
+            analyses: List of PropertyCoverageAnalysis objects
+            summary: CoverageSummary object
+
+        Returns:
+            PDF file as bytes
+        """
+        try:
+            from weasyprint import HTML
+        except ImportError:
+            raise ImportError(
+                "weasyprint is required for PDF generation. "
+                "Install it with: pip install weasyprint"
+            )
+
+        # Generate HTML report
+        html_content = ReportGenerator.generate_html_report(analyses, summary)
+
+        # Convert HTML to PDF
+        pdf_bytes = HTML(string=html_content).write_pdf()
+        return pdf_bytes
+
+    @staticmethod
     def generate_text_report(
         analyses: List[PropertyCoverageAnalysis],
         summary: CoverageSummary,
@@ -2190,6 +2220,17 @@ def main():
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html_report)
         print(f"HTML report saved to: {html_path}")
+
+        # Save PDF report
+        try:
+            pdf_report = ReportGenerator.generate_pdf_report(analyses, summary)
+            pdf_path = output_dir / f"craftsman_coverage_report_{timestamp}.pdf"
+            with open(pdf_path, "wb") as f:
+                f.write(pdf_report)
+            print(f"PDF report saved to: {pdf_path}")
+        except ImportError as e:
+            print(f"Warning: {e}")
+            print("Skipping PDF generation. Install weasyprint to enable PDF reports.")
 
         print("")
         print("All reports generated successfully!")
