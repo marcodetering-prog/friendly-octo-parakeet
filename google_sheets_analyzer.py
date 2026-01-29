@@ -509,27 +509,48 @@ class CSVDataSource(DataSource):
 
     def _find_address_column(self, headers: List[str]) -> Optional[str]:
         """
-        Find the address/street column by common names.
+        Find the address/street column by keyword matching and data patterns.
 
         Looks for columns like: address, strasse, street, straße, etc.
+        Also analyzes column content for street address patterns.
         """
-        address_keywords = ["address", "strasse", "straße", "street", "adresse", "rue"]
+        # Expanded keywords for multiple languages
+        address_keywords = [
+            "address", "strasse", "straße", "street", "adresse", "rue",
+            "via", "calle", "straßenname", "strassenname", "street name",
+            "ort", "location", "lugar", "lieu", "weg", "allee", "gasse"
+        ]
+
+        # First try keyword matching
         for header in headers:
             if any(keyword.lower() in header.lower() for keyword in address_keywords):
                 return header
+
+        # If no keyword match, try to detect by data patterns
+        # Look for columns with street-like data (contains text + numbers)
+        # This is implemented in fetch_properties when we analyze the data
         return None
 
     def _find_number_column(self, headers: List[str]) -> Optional[str]:
-        """Find the house number column."""
-        number_keywords = ["hausnummer", "nummer", "number", "house"]
+        """Find the house number column by keyword or data pattern."""
+        number_keywords = [
+            "hausnummer", "nummer", "number", "house", "nr.", "nr",
+            "numero", "numéro", "n°", "no.", "houseno", "house_number",
+            "häusnummer", "huisnummer", "numero_civico"
+        ]
         for header in headers:
             if any(keyword.lower() in header.lower() for keyword in number_keywords):
                 return header
         return None
 
     def _find_plz_column(self, headers: List[str]) -> Optional[str]:
-        """Find the postal code column by common names."""
-        plz_keywords = ["plz", "postal", "zip", "postleitzahl", "einsatzgebiet"]
+        """Find the postal code column by keyword or data pattern."""
+        plz_keywords = [
+            "plz", "postal", "zip", "postleitzahl", "einsatzgebiet",
+            "postcode", "code_postal", "postal_code", "zip_code", "postalcode",
+            "ort", "city", "stadt", "gemeinde", "cap", "codice_postale",
+            "código_postal", "code_postal", "cp", "cep"
+        ]
         for header in headers:
             if header and any(keyword.lower() in header.lower() for keyword in plz_keywords):
                 return header
@@ -548,6 +569,75 @@ class CSVDataSource(DataSource):
             if header and header.strip():
                 return header
         return None
+
+    def _detect_column_by_data(self, filepath: str) -> Dict[str, Optional[str]]:
+        """
+        Detect address columns by analyzing actual data patterns.
+
+        Returns dict with keys: 'address', 'number', 'plz', 'name'
+        """
+        import re
+        detected = {'address': None, 'number': None, 'plz': None, 'name': None}
+
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                sample_rows = []
+
+                # Collect first 5-10 data rows
+                for i, row in enumerate(reader):
+                    if i >= 10:
+                        break
+                    if row and any(row.values()):
+                        sample_rows.append(row)
+
+                if not sample_rows:
+                    return detected
+
+                # Analyze each column in sample rows
+                for col in reader.fieldnames or []:
+                    if not col:
+                        continue
+
+                    col_values = [str(row.get(col, "")).strip() for row in sample_rows if row.get(col)]
+
+                    # Skip mostly empty columns
+                    if len(col_values) < len(sample_rows) / 2:
+                        continue
+
+                    # Detect address column: contains text + street-like words + variety
+                    has_letters = any(any(c.isalpha() for c in v) for v in col_values)
+                    has_streets = any(
+                        keyword in v.lower()
+                        for v in col_values
+                        for keyword in ["str", "weg", "allee", "gasse", "ring", "strasse", "avenue"]
+                    )
+                    if has_letters and (has_streets or detected['address'] is None):
+                        if detected['address'] is None or has_streets:
+                            detected['address'] = col
+
+                    # Detect number column: mostly digits/ranges
+                    has_numbers = sum(1 for v in col_values if any(c.isdigit() for c in v)) / len(col_values) > 0.7
+                    is_mostly_short = sum(1 for v in col_values if len(v) <= 5) / len(col_values) > 0.8
+                    if has_numbers and is_mostly_short and not any(c.isalpha() for v in col_values for c in v):
+                        if detected['number'] is None:
+                            detected['number'] = col
+
+                    # Detect PLZ column: 4-5 digit postal codes
+                    is_plz = sum(1 for v in col_values if re.match(r'^\d{4,5}$', v)) / len(col_values) > 0.8
+                    if is_plz:
+                        detected['plz'] = col
+
+                    # Detect name column: longer text, no numbers, no special patterns
+                    is_long_text = sum(1 for v in col_values if len(v) > 10) / len(col_values) > 0.5
+                    no_numbers = sum(1 for v in col_values if not any(c.isdigit() for c in v)) / len(col_values) > 0.7
+                    if is_long_text and no_numbers and detected['name'] is None:
+                        detected['name'] = col
+
+        except Exception:
+            pass
+
+        return detected
 
     def _is_metadata_row(self, row: Dict) -> bool:
         """Check if a row is metadata/header info rather than data."""
@@ -652,17 +742,20 @@ class CSVDataSource(DataSource):
             if not reader.fieldnames:
                 return []
 
-            # Find columns
+            # Find columns by keyword matching first
             address_col = self._find_address_column(reader.fieldnames)
             number_col = self._find_number_column(reader.fieldnames)
             plz_col = self._find_plz_column(reader.fieldnames)
 
-            if not address_col:
-                # Fallback: try "address" column
-                address_col = next(
-                    (col for col in reader.fieldnames if col and "address" in col.lower()),
-                    None
-                )
+            # If keyword matching didn't find columns, try data-driven detection
+            if not address_col or not number_col or not plz_col:
+                detected = self._detect_column_by_data(str(self.properties_file))
+                if not address_col and detected['address']:
+                    address_col = detected['address']
+                if not number_col and detected['number']:
+                    number_col = detected['number']
+                if not plz_col and detected['plz']:
+                    plz_col = detected['plz']
 
             if not address_col:
                 raise ValueError(f"Could not find address column. Available: {reader.fieldnames}")
