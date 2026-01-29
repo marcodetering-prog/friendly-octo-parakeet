@@ -396,21 +396,112 @@ class CSVDataSource(DataSource):
 
         Supports full Google Sheets exports with automatic column detection.
         Works with both simple and complex CSV formats.
+        Auto-detects file types by analyzing column headers.
 
         Args:
-            input_dir: Directory containing properties.csv and craftsmen.csv (or craftsman.csv)
+            input_dir: Directory containing CSV files
         """
         self.input_dir = Path(input_dir)
-        self.properties_file = self.input_dir / "properties.csv"
+        self.properties_file = None
+        self.craftsmen_file = None
 
-        # Support both singular and plural names
-        craftsmen_file = self.input_dir / "craftsmen.csv"
-        craftsman_file = self.input_dir / "craftsman.csv"
-        self.craftsmen_file = craftsmen_file if craftsmen_file.exists() else craftsman_file
+        # Auto-detect CSV files by content
+        self._auto_detect_csv_files()
+
+    def _auto_detect_csv_files(self):
+        """Auto-detect properties and craftsmen CSV files by analyzing column headers."""
+        if not self.input_dir.exists():
+            return
+
+        csv_files = list(self.input_dir.glob("*.csv"))
+
+        for csv_file in csv_files:
+            try:
+                file_type = self._detect_file_type(str(csv_file))
+                if file_type == "properties":
+                    self.properties_file = csv_file
+                elif file_type == "craftsmen":
+                    self.craftsmen_file = csv_file
+            except Exception:
+                # Skip files that can't be read
+                continue
+
+    def _detect_file_type(self, filepath: str) -> Optional[str]:
+        """
+        Detect whether a CSV file contains properties or craftsmen data.
+
+        Returns:
+            "properties" if file has address/street columns (Liegenschaft, Strasse, Hausnummer, PLZ, Ort)
+            "craftsmen" if file has name + service area + category columns
+            None if file type can't be determined
+        """
+        try:
+            # Use the same header detection as the rest of the code
+            lines = self._find_valid_header_row(filepath)
+
+            import io
+            text_stream = io.StringIO("".join(lines))
+            reader = csv.DictReader(text_stream)
+
+            if not reader.fieldnames:
+                return None
+
+            # Normalize headers to lowercase
+            headers_lower = [h.lower() if h else "" for h in reader.fieldnames]
+            headers_text = " ".join(headers_lower)
+
+            # Distinctive properties file indicators (Liegenschaft is very specific)
+            has_liegenschaft = "liegenschaft" in headers_text
+            has_strasse = any(kw in headers_text for kw in ["strasse", "straße", "street"])
+            has_plz_ort = any(kw in headers_text for kw in ["plz", "postal", "ort", "city"])
+
+            # Distinctive craftsmen file indicators
+            has_firmenname = "firmenname" in headers_text
+            has_einsatzgebiet = "einsatzgebiet" in headers_text
+
+            # Count how many TRUE/FALSE category columns exist
+            first_rows = []
+            for _ in range(min(3, len(lines) - 1)):  # Check first 3 data rows
+                row = next(reader, None)
+                if row:
+                    first_rows.append(row)
+                else:
+                    break
+
+            true_false_columns = 0
+            if first_rows:
+                for col_idx in range(len(reader.fieldnames)):
+                    for row in first_rows:
+                        if col_idx < len(reader.fieldnames):
+                            col_name = reader.fieldnames[col_idx]
+                            if col_name and col_name in row:
+                                val = str(row.get(col_name, "")).strip().upper()
+                                if val in ["TRUE", "FALSE", "1", "0", "X", "✓", "WAHR"]:
+                                    true_false_columns += 1
+                                    break
+
+            # Determine file type based on distinctive indicators
+            # Properties file must have Liegenschaft OR (Strasse + PLZ/Ort)
+            is_properties = has_liegenschaft or (has_strasse and has_plz_ort)
+
+            # Craftsmen file must have Firmenname AND (Einsatzgebiet OR many TRUE/FALSE columns)
+            is_craftsmen = has_firmenname and (has_einsatzgebiet or true_false_columns >= 5)
+
+            if is_properties and not is_craftsmen:
+                return "properties"
+            elif is_craftsmen and not is_properties:
+                return "craftsmen"
+            elif is_craftsmen and is_properties:
+                # Both match, use Firmenname as tiebreaker
+                return "craftsmen" if has_firmenname else "properties"
+
+            return None
+        except Exception:
+            return None
 
     def is_available(self) -> bool:
         """Check if CSV files exist."""
-        return self.properties_file.exists() and self.craftsmen_file.exists()
+        return self.properties_file is not None and self.craftsmen_file is not None
 
     def get_source_name(self) -> str:
         """Get human-readable name of this data source."""
