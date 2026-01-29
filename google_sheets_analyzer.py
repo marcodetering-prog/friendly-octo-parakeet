@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
-Dynamic Craftsman Coverage Analyzer with Google Sheets Integration
+Craftsman Coverage Analyzer
 
 This script analyzes which craftsman categories have coverage for each property.
 It automatically:
-- Reads data directly from Google Sheets (no manual entry needed)
-- Detects all properties from the property sheet
-- Detects all craftsmen and their specializations
+- Reads data from CSV files (place in input/ folder)
+- Detects all properties from properties.csv
+- Detects all craftsmen and their specializations from craftsman.csv
 - Extracts service areas and categories dynamically
 - Generates detailed coverage reports
 
-The solution is self-adjusting: add/remove properties, craftsmen, or categories
-in Google Sheets and the script automatically picks up the changes on next run.
+Usage:
+  1. Place input/properties.csv and input/craftsman.csv in the input/ folder
+  2. Run: python3 google_sheets_analyzer.py
+  3. Check output/ folder for generated reports
 
 Author: Craftsman Coverage Analysis Tool
 Date: 2026-01-29
@@ -112,198 +114,6 @@ class DataSource(ABC):
 
 # ============================================================================
 # GOOGLE SHEETS DATA SOURCE
-# ============================================================================
-
-class GoogleSheetsDataSource(DataSource):
-    """Fetches data from Google Sheets using the Google Sheets API."""
-
-    def __init__(self, sheet_id: str, property_gid: int, craftsman_gid: int):
-        """
-        Initialize Google Sheets data source.
-
-        Args:
-            sheet_id: Google Sheets ID
-            property_gid: Sheet GID for properties
-            craftsman_gid: Sheet GID for craftsmen
-        """
-        self.sheet_id = sheet_id
-        self.property_gid = property_gid
-        self.craftsman_gid = craftsman_gid
-        self.service = None
-        self._initialize_service()
-
-    def _initialize_service(self):
-        """Initialize Google Sheets API service."""
-        try:
-            from google.auth.transport.requests import Request
-            from google.oauth2.service_account import Credentials
-            from google.auth.transport.urllib3 import AuthorizedHttp
-            import urllib3
-            from googleapiclient.discovery import build
-            from googleapiclient.errors import HttpError
-
-            self.build = build
-            self.HttpError = HttpError
-
-            # Try to load credentials from file
-            creds_file = Path("credentials.json")
-            if creds_file.exists():
-                try:
-                    credentials = Credentials.from_service_account_file(
-                        str(creds_file),
-                        scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"],
-                    )
-                    self.service = build("sheets", "v4", credentials=credentials)
-                except Exception as e:
-                    print(f"Warning: Could not load credentials from file: {e}")
-                    self.service = None
-        except ImportError:
-            self.service = None
-
-    def is_available(self) -> bool:
-        """Check if Google Sheets API is configured."""
-        return self.service is not None
-
-    def get_source_name(self) -> str:
-        """Get human-readable name of this data source."""
-        return "Google Sheets"
-
-    def fetch_properties(self) -> List[str]:
-        """
-        Fetch properties from Google Sheets.
-
-        Sheet structure:
-        - Column C: Strasse (addresses)
-        - Starts from row 2 (row 1 is header)
-
-        Returns:
-            List of property addresses
-        """
-        if not self.is_available():
-            raise RuntimeError("Google Sheets API not configured")
-
-        try:
-            # Fetch column C (properties) from property sheet
-            result = self.service.spreadsheets().values().get(
-                spreadsheetId=self.sheet_id,
-                range=f"gid={self.property_gid}&range=C2:C1000"
-            ).execute()
-
-            values = result.get("values", [])
-            properties = [row[0] for row in values if row and row[0].strip()]
-            return properties
-        except Exception as e:
-            print(f"Error fetching properties: {e}")
-            raise
-
-    def fetch_categories(self) -> List[str]:
-        """
-        Fetch categories from Google Sheets.
-
-        Detects categories from column headers in craftsman sheet.
-        Service-related columns (excluding Name, Service Areas, etc.)
-
-        Returns:
-            List of category names
-        """
-        if not self.is_available():
-            raise RuntimeError("Google Sheets API not configured")
-
-        try:
-            # Fetch header row to get categories
-            result = self.service.spreadsheets().values().get(
-                spreadsheetId=self.sheet_id,
-                range=f"gid={self.craftsman_gid}&range=A1:Z1"
-            ).execute()
-
-            headers = result.get("values", [[]])[0]
-
-            # Filter out non-service columns
-            exclude_columns = ["Name", "Einsatzgebiet PLZ", "Service Areas", ""]
-            categories = [
-                h for h in headers
-                if h and h not in exclude_columns
-            ]
-            return categories
-        except Exception as e:
-            print(f"Error fetching categories: {e}")
-            raise
-
-    def fetch_craftsmen(self) -> Dict[str, Craftsman]:
-        """
-        Fetch craftsmen from Google Sheets.
-
-        Sheet structure:
-        - Column A: Craftsman name
-        - Column G: Einsatzgebiet PLZ (service areas)
-        - Other columns: Categories with TRUE/checkmark for specialization
-
-        Returns:
-            Dictionary mapping craftsman name to Craftsman object
-        """
-        if not self.is_available():
-            raise RuntimeError("Google Sheets API not configured")
-
-        try:
-            # Fetch all data from craftsman sheet
-            result = self.service.spreadsheets().values().get(
-                spreadsheetId=self.sheet_id,
-                range=f"gid={self.craftsman_gid}&range=A1:Z1000"
-            ).execute()
-
-            rows = result.get("values", [])
-            if not rows:
-                return {}
-
-            # Parse header row to map columns to categories
-            headers = rows[0]
-            name_col = 0
-            plz_col = 6  # Column G is service areas
-
-            craftsmen = {}
-
-            # Process each craftsman row (skip header)
-            for row_idx in range(1, len(rows)):
-                row = rows[row_idx]
-                if not row or not row[0].strip():
-                    continue
-
-                name = row[0].strip()
-
-                # Extract service areas
-                service_areas = []
-                if len(row) > plz_col and row[plz_col]:
-                    # Parse service areas, reconstructing full addresses from split pieces
-                    service_areas = self._parse_service_areas(row[plz_col])
-
-                # Extract categories (TRUE/checkmark values)
-                categories = []
-                for col_idx, header in enumerate(headers):
-                    if col_idx >= len(row):
-                        continue
-
-                    # Skip non-service columns
-                    if header in ["Name", "Einsatzgebiet PLZ", ""]:
-                        continue
-
-                    # Check if this category is marked for the craftsman
-                    cell_value = row[col_idx].strip().upper() if col_idx < len(row) else ""
-                    if cell_value in ["TRUE", "1", "X", "✓"]:
-                        categories.append(header)
-
-                if categories or service_areas:
-                    craftsmen[name] = Craftsman(
-                        name=name,
-                        categories=categories,
-                        service_areas_plz=service_areas
-                    )
-
-            return craftsmen
-        except Exception as e:
-            print(f"Error fetching craftsmen: {e}")
-            raise
-
-
 # ============================================================================
 # FALLBACK DATA SOURCE
 # ============================================================================
@@ -1602,7 +1412,7 @@ def main():
     print("=" * 80)
     print("")
 
-    # Try different data sources in order
+    # Try data sources in order
     data_source = None
 
     # 1. Try CSV files first
@@ -1614,37 +1424,15 @@ def main():
     else:
         print("No CSV files found in input/ folder.")
         print("")
-
-        # 2. Try Google Sheets
-        print("Attempting to load data from Google Sheets...")
-        SHEET_ID = "10zosC8dEj0qj6waVjRc_Gx1cSpxUlcMZz783SyW3N5s"
-        PROPERTY_GID = 1124098260
-        CRAFTSMAN_GID = 1542074825
-
-        gs_source = GoogleSheetsDataSource(
-            sheet_id=SHEET_ID,
-            property_gid=PROPERTY_GID,
-            craftsman_gid=CRAFTSMAN_GID,
-        )
-
-        if gs_source.is_available():
-            print("Connected to Google Sheets!")
-            data_source = gs_source
-        else:
-            print("Warning: Google Sheets API not configured.")
-            print("Falling back to static sample data.")
-            print("")
-            print("To use your own data:")
-            print("  Option 1 - CSV files (no setup needed):")
-            print("    1. Edit input/properties.csv and input/craftsmen.csv")
-            print("    2. Run this script again")
-            print("")
-            print("  Option 2 - Google Sheets:")
-            print("    1. See SETUP_GOOGLE_SHEETS.md for configuration")
-            print("    2. Create credentials.json file")
-            print("    3. Run this script again")
-            print("")
-            data_source = StaticDataSource()
+        print("To use your own data:")
+        print("  1. Create CSV files in the input/ folder:")
+        print("     - input/properties.csv")
+        print("     - input/craftsman.csv")
+        print("  2. Run this script again")
+        print("")
+        print("Falling back to static sample data.")
+        print("")
+        data_source = StaticDataSource()
 
     print(f"Data Source: {data_source.get_source_name()}")
     print("")
