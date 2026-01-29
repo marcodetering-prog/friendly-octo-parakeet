@@ -933,6 +933,58 @@ class CraftsmanCoverageAnalyzer:
         """
         return [self.analyze_property(prop) for prop in self.properties]
 
+    def find_unmatched_service_areas(self) -> Dict[str, List[str]]:
+        """
+        Find service areas in craftsmen that don't match any property.
+
+        Returns:
+            Dictionary mapping craftsman name to list of unmatched service areas
+        """
+        unmatched = {}
+
+        for craftsman_name, craftsman in self.craftsmen.items():
+            if not craftsman.service_areas_plz:
+                continue
+
+            unmatched_areas = []
+            for service_area in craftsman.service_areas_plz:
+                # Check if this service area matches any property
+                area_matches_property = False
+
+                for prop in self.properties:
+                    # Try all three matching priorities used in coverage analysis
+                    prop_street = self.extract_street_name(prop)
+
+                    # Priority 1: Explicit address match
+                    if prop_street in service_area or service_area in prop_street:
+                        area_matches_property = True
+                        break
+
+                    # Priority 2: Apartment number match
+                    if not area_matches_property:
+                        prop_numbers = self.extract_apartment_numbers(prop)
+                        area_numbers = self.extract_apartment_numbers(service_area)
+                        if prop_numbers and area_numbers and any(
+                            pn in area_numbers for pn in prop_numbers
+                        ):
+                            area_matches_property = True
+                            break
+
+                    # Priority 3: Full address match
+                    if not area_matches_property:
+                        if (prop in service_area or prop.strip() in service_area or
+                            service_area in prop):
+                            area_matches_property = True
+                            break
+
+                if not area_matches_property:
+                    unmatched_areas.append(service_area)
+
+            if unmatched_areas:
+                unmatched[craftsman_name] = unmatched_areas
+
+        return unmatched
+
     def generate_summary(
         self, analyses: List[PropertyCoverageAnalysis], source_name: str
     ) -> CoverageSummary:
@@ -988,7 +1040,9 @@ class ReportGenerator:
 
     @staticmethod
     def generate_json_report(
-        analyses: List[PropertyCoverageAnalysis], summary: CoverageSummary
+        analyses: List[PropertyCoverageAnalysis],
+        summary: CoverageSummary,
+        unmatched_areas: Dict[str, List[str]] = None,
     ) -> str:
         """
         Generate JSON report.
@@ -996,6 +1050,7 @@ class ReportGenerator:
         Args:
             analyses: List of PropertyCoverageAnalysis objects
             summary: CoverageSummary object
+            unmatched_areas: Dictionary of unmatched service areas
 
         Returns:
             JSON string
@@ -1042,6 +1097,7 @@ class ReportGenerator:
                 }
                 for analysis in sorted(analyses, key=lambda x: x.property_name)
             ],
+            "unmatched_service_areas": unmatched_areas or {},
         }
         return json.dumps(report, indent=2, ensure_ascii=False)
 
@@ -1078,7 +1134,9 @@ class ReportGenerator:
 
     @staticmethod
     def generate_text_report(
-        analyses: List[PropertyCoverageAnalysis], summary: CoverageSummary
+        analyses: List[PropertyCoverageAnalysis],
+        summary: CoverageSummary,
+        unmatched_areas: Dict[str, List[str]] = None,
     ) -> str:
         """
         Generate human-readable text report.
@@ -1163,6 +1221,18 @@ class ReportGenerator:
             lines.append("")
             for analysis in properties_with_full_coverage:
                 lines.append(f"  - {analysis.property_name}")
+            lines.append("")
+
+        # Unmatched service areas
+        if unmatched_areas:
+            lines.append("\nUNMATCHED CRAFTSMAN SERVICE AREAS:")
+            lines.append("(Service areas that don't match any property)")
+            lines.append("-" * 80)
+            for craftsman_name in sorted(unmatched_areas.keys()):
+                areas = unmatched_areas[craftsman_name]
+                lines.append(f"\n{craftsman_name}:")
+                for area in sorted(areas):
+                    lines.append(f"  - {area}")
             lines.append("")
 
         lines.append("=" * 80)
@@ -1253,6 +1323,9 @@ def main():
         print("Analyzing coverage for all properties...")
         analyses = analyzer.analyze_all_properties()
         summary = analyzer.generate_summary(analyses, data_source.get_source_name())
+
+        # Find unmatched service areas
+        unmatched_areas = analyzer.find_unmatched_service_areas()
         print("Analysis complete!")
         print("")
 
@@ -1267,11 +1340,15 @@ def main():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         # Text report
-        text_report = ReportGenerator.generate_text_report(analyses, summary)
+        text_report = ReportGenerator.generate_text_report(
+            analyses, summary, unmatched_areas
+        )
         print(text_report)
 
         # Save JSON report
-        json_report = ReportGenerator.generate_json_report(analyses, summary)
+        json_report = ReportGenerator.generate_json_report(
+            analyses, summary, unmatched_areas
+        )
         json_path = output_dir / f"craftsman_coverage_report_{timestamp}.json"
         with open(json_path, "w", encoding="utf-8") as f:
             f.write(json_report)
