@@ -1315,7 +1315,9 @@ class CraftsmanCoverageAnalyzer:
                         if street_match and property_numbers:
                                 # Use adaptive number extraction
                                 service_numbers = self.extract_apartment_numbers(segment)
-                                if service_numbers and any(pn in service_numbers for pn in property_numbers):
+                                # If no specific numbers, craftsman covers entire street
+                                # Otherwise, check if property number is in service area
+                                if not service_numbers or any(pn in service_numbers for pn in property_numbers):
                                     serves_property = True
                                     break
 
