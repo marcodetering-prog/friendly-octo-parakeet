@@ -1255,6 +1255,10 @@ class CraftsmanCoverageAnalyzer:
             else:
                 # Check each service area
                 for service_area in craftsman.service_areas_plz:
+                    # Normalize whitespace for multi-line service areas (e.g., from Google Sheets)
+                    # Convert tab-newline sequences to " / " to preserve street boundaries
+                    service_area = service_area.replace('\t\n', ' / ').replace('\t', ' ').replace('\n', ' ')
+
                     # PRIORITY 1: Exact explicit address match
                     if street_name in service_area or service_area in street_name:
                         serves_property = True
