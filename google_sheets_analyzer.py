@@ -953,17 +953,21 @@ class CraftsmanCoverageAnalyzer:
         """
         Find all craftsmen that serve this property and category.
 
-        Uses explicit address matching: the property address (street + number)
-        must appear in the craftsman's service areas.
+        Matches based on:
+        1. Full explicit address match (e.g., "Main Street 101" in service area)
+        2. Same street with matching property number (e.g., property "71" in "St. 65/67/69/71")
 
         Args:
-            property_address: Property address (e.g., "Main Street 101 10001")
+            property_address: Property address (e.g., "Zürcherstr. 71 8104")
             category: Craftsman category
 
         Returns:
             List of craftsmen names that can serve this property/category
         """
-        street_name = self.extract_street_name(property_address)  # "Main Street 101"
+        import re
+
+        street_name = self.extract_street_name(property_address)  # "Zürcherstr. 71"
+        property_numbers = self.extract_apartment_numbers(property_address)  # ["71"]
         matching_craftsmen = []
 
         for craftsman_name, craftsman in self.craftsmen.items():
@@ -978,12 +982,35 @@ class CraftsmanCoverageAnalyzer:
                 # No service area restriction - serves everywhere
                 serves_property = True
             else:
-                # Check for explicit address match
-                # E.g., "Main Street 101" must match service areas containing it
+                # Check service areas
                 for service_area in craftsman.service_areas_plz:
+                    # PRIORITY 1: Explicit address match
+                    # E.g., "Zürcherstr. 71" must match service areas containing it
                     if street_name in service_area or service_area in street_name:
                         serves_property = True
                         break
+
+                    # PRIORITY 2: Same street with matching property number
+                    # Extract just the street name (without any numbers)
+                    # Remove trailing number and punctuation to get street name only
+                    property_street_only = re.sub(r'\s+\d+.*$', '', street_name).strip()
+
+                    # Extract street name from service area (first part before slash/comma/number)
+                    service_street_part = service_area.split("/")[0].split(",")[0].strip()
+                    service_street_only = re.sub(r'\s+\d+.*$', '', service_street_part).strip()
+
+                    # Check if streets match (case-insensitive)
+                    street_match = (
+                        service_street_only.lower() == property_street_only.lower()
+                    )
+
+                    if street_match and property_numbers:
+                        # Extract all property numbers from service area
+                        service_numbers = self.extract_apartment_numbers(service_area)
+                        # Check if property number is in service area numbers
+                        if service_numbers and any(pn in service_numbers for pn in property_numbers):
+                            serves_property = True
+                            break
 
             if serves_property:
                 matching_craftsmen.append(craftsman_name)
