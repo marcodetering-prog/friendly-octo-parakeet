@@ -1,0 +1,13 @@
+# Google Sheets API and Authentication
+google-api-python-client>=2.100.0
+google-auth>=2.25.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+
+# No other external dependencies required
+# Uses Python standard library for:
+# - json: JSON report generation
+# - csv: CSV report generation
+# - dataclasses: Data structures
+# - pathlib: File path handling
+# - abc: Abstract base classes

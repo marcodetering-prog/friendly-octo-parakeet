@@ -1,0 +1,795 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+,III - Übersicht Handwerker,,,,,,,,,,,,,,,,,,,,,,,,,
+,"Aktuell wählt ailean die Handwerker, welche in der gleichen PLZ aktiv sind der Reihe nach aus. Sollten Sie also zwei Maler haben, welche in der gleichen Liegenschaft (PLZ) aktiv sind, platzieren Sie ihren Favoriten vor dem Zweitplatzierten.",,,,,,,,,,,All-rounder/Caretaker,Plumbing Services,Household Appliance Technician,Flooring Installer,Locksmith,Window Specialists,Shutter Specialists,Electrician,Painter,Pest Control,Elevator Technician,Garage Door Technician,Carpenter,Heating Technician,Drain Cleaner
+,,,,,,,,,,,,1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384
+,"Priorisierung innerhalb
+ der gleichen Liegenschaft 
+(nur innerhalb der gleichen Handwerksleistung z.B. 
+wenn zwei Handwerker grundsätzlich Malerleistungen erbringen)",Firmenname,Ansprechperson,E-Mail,Telefon,"Einsatzgebiet PLZ
+(geben Sie hier die PLZ der Liegenschaften an, in 
+denen dieser Handwerker 
+berücksichtigt werden soll""","Adresse 
+(Ausgangspunkt Anfahrtskosten 
+wenn bekannt)","Netto (exkl. MwSt) Stundenpauschale 
+in CHF falls fest vereinbart","Kompetenzsumme 
+pro Auftrag","Sprache
+Auftragsvergabe","Pikettdienst
+Auch wenn intern 
+bitte Kontakt eintragen",Allrounder/Hauswart,Sanitärleistungen,Haushaltsgerätetechniker,Bodenleger,Schlosser,Fensterspezialisten,Rolladenspezialisten,Elektriker,Maler,Ungeziefer,Aufzugstechiker,Garagentortechniker,Schreiner,Heizungstechniker,Kanalreiniger
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,André Gonçalves,André Gonçalves,a.goncalves@peterhalter.com,076 297 28 10,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Toma Metallwaren GmbH,Toma Metallwaren GmbH,info@toma-metall.ch,052 503 77 31,"Im Struppen 11,12,13,14,15,16,17,19,21, 8048 Zürich","St. Gallerstr. 15, 8353 Elgg",,ChF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,DBU Facility Services AG,,info@dbu.ch,044 436 86 00,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Friedaustrasse 9, 8952 Schlieren",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Dober AG,,info@doberag.ch,044 733 60 00,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Friedaustrasse 6, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Badenerstr.717/Im Struppen 8, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,"Badenerstr.717/Im Struppen 8, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,AS Aufzüge,AS Aufzüge,info.ch@lift.ch,0848 84 01 56,"Badenerstr.717/Im Struppen 8, 8048 Zürich","Friedgrabenstrasse 15, 8907 Wettswil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Badenerstr. 727, 731, 733, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Badenerstr. 727, 731, 733, 8048 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Badenerstr. 727, 731, 733, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,"Badenerstr. 727, 731, 733, 8048 Zürich","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Badenerstr. 727, 731, 733, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Badenerstr. 727, 731, 733, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,André Gonçalves,André Gonçalves,a.goncalves@peterhalter.com,076 297 28 10,"Badenerstr. 727, 731, 733, 8048 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Badenerstr. 727, 731, 733, 8048 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Badenerstr. 727, 731, 733, 8048 Zürich","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Badenerstr. 727, 731, 733, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Toma Metallwaren GmbH,Toma Metallwaren GmbH,info@toma-metall.ch,052 503 77 31,"Badenerstr. 727, 731, 733, 8048 Zürich","St. Gallerstr. 15, 8353 Elgg",,ChF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,45 578 48 80,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,André Gonçalves,André Gonçalves,a.goncalves@peterhalter.com,076 297 28 10,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Friedaustrasse 9, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,44 438 62 42,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,45 310 20 00,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,André Gonçalves,André Gonçalves,a.goncalves@peterhalter.com,076 297 28 10,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Toma Metallwaren GmbH,Toma Metallwaren GmbH,info@toma-metall.ch,052 503 77 31,"Meierwiesenstrasse 52, 54, 56, 58, 8064 Zürich","St. Gallerstr. 15, 8353 Elgg",,ChF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Saumackerstr. 20/22/24, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Saumackerstr. 20/22/24, 8048 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Saumackerstr. 20/22/24, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Saumackerstr. 20/22/24, 8048 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Saumackerstr. 20/22/24, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Saumackerstr. 20/22/24, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,"Saumackerstr. 20/22/24, 8048 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Saumackerstr. 20/22/24, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Saumackerstr. 20/22/24, 8048 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Baslerstr. 138/140, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Baslerstr. 138/140, 8048 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Baslerstr. 138/140, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Baslerstr. 138/140, 8048 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Baslerstr. 138/140, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Baslerstr. 138/140, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,"Baslerstr. 138/140, 8048 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Baslerstr. 138/140, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Baslerstr. 138/140, 8048 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Bristenstr. 19/21, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Bristenstr. 19/21, 8048 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Bristenstr. 19/21, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Bristenstr. 19/21, 8048 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Bristenstr. 19/21, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Bristenstr. 19/21, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,"Bristenstr. 19/21, 8048 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Bristenstr. 19/21, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Bristenstr. 19/21, 8048 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Letzigraben 235/237, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Letzigraben 235/237, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Letzigraben 235/237, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Letzigraben 235/237, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Letzigraben 235/237, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Letzigraben 235/237, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Letzigraben 235/237, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Letzigraben 235/237, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Letzigraben 235/237, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Wydäckerring 149 / Letzigraben 245, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Letzigraben 239/241 / Wydäckerring 148, 8047 Zürich","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Wydäckerring 40/46/48, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Wydäckerring 40/46/48, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Wydäckerring 40/46/48, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Wydäckerring 40/46/48, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Wydäckerring 40/46/48, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Wydäckerring 40/46/48, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Wydäckerring 40/46/48, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Wydäckerring 40/46/48, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Wydäckerring 40/46/48, 8047 Zürich","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Wydäckerring 40/46/48, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Mühlebach Steuerungen + Antrieb AG,Mühlebach Steuerungen + Antrieb AG,muehlebach.h@bluewin.ch,044 734 29 92,"Wydäckerring 40/46/48, 8047 Zürich","Grubenstrass 4, 8902 Urdorf",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Wydäckerring 42/50/52, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Wydäckerring 42/50/52, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Wydäckerring 42/50/52, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Wydäckerring 42/50/52, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Wydäckerring 42/50/52, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Wydäckerring 42/50/52, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Wydäckerring 42/50/52, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Wydäckerring 42/50/52, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Wydäckerring 42/50/52, 8047 Zürich","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Wydäckerring 42/50/52, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Mühlebach Steuerungen + Antrieb AG,Mühlebach Steuerungen + Antrieb AG,muehlebach.h@bluewin.ch,044 734 29 92,"Wydäckerring 42/50/52, 8047 Zürich","Grubenstrass 4, 8902 Urdorf",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Wydäckerring 66, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Wydäckerring 66, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Wydäckerring 66, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Wydäckerring 66, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Wydäckerring 66, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Wydäckerring 66, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Wydäckerring 66, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Wydäckerring 66, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Wydäckerring 66, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Mühlebach Steuerungen + Antrieb AG,Mühlebach Steuerungen + Antrieb AG,muehlebach.h@bluewin.ch,044 734 29 92,"Wydäckerring 66, 8047 Zürich","Grubenstrass 4, 8902 Urdorf",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Wydäckerring 138/140, 8047 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Wydäckerring 138/140, 8047 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Wydäckerring 138/140, 8047 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,"Wydäckerring 138/140, 8047 Zürich","Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Wydäckerring 138/140, 8047 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Wydäckerring 138/140, 8047 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,"Wydäckerring 138/140, 8047 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,"Wydäckerring 138/140, 8047 Zürich",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,"Wydäckerring 138/140, 8047 Zürich","Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Baslerstr. 127, 8048 Zürich","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,"Baslerstr. 127, 8048 Zürich","Friedaustrasse 9, 8952 Schlieren",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,"Baslerstr. 127, 8048 Zürich","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Baslerstr. 127, 8048 Zürich","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Baslerstr. 127, 8048 Zürich","Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Baslerstr. 127, 8048 Zürich","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Baslerstr. 127, 8048 Zürich","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,"Baslerstr. 127, 8048 Zürich",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,"Baslerstr. 127, 8048 Zürich","Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Langackerstr. 2/4, 8952 Schlieren","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,André Gonçalves,André Gonçalves,a.goncalves@peterhalter.com,076 297 28 10,"Langackerstr. 2/4, 8952 Schlieren","Friedaustrasse 9, 8952 Schlieren",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,"Langackerstr. 2/4, 8952 Schlieren","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Langackerstr. 2/4, 8952 Schlieren","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Dober AG,,info@doberag.ch,044 733 60 00,"Langackerstr. 2/4, 8952 Schlieren","Friedaustrasse 6, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Langackerstr. 2/4, 8952 Schlieren","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Langackerstr. 2/4, 8952 Schlieren","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,"Langackerstr. 2/4, 8952 Schlieren","Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Langackerstr. 2/4, 8952 Schlieren","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,"Langackerstr. 2/4, 8952 Schlieren",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,TBS Torbausysteme AG,TBS Torbausysteme AG,info@torbausysteme.ch,043 411 63 63,"Langackerstr. 2/4, 8952 Schlieren","Rietwiesenstrasse 11, 8156 Oberhasli",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Langackerstr. 6, 8952 Schlieren","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,André Gonçalves,André Gonçalves,a.goncalves@peterhalter.com,076 297 28 10,"Langackerstr. 6, 8952 Schlieren","Friedaustrasse 9, 8952 Schlieren",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,"Langackerstr. 6, 8952 Schlieren","Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Langackerstr. 6, 8952 Schlieren","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Dober AG,,info@doberag.ch,044 733 60 00,"Langackerstr. 6, 8952 Schlieren","Friedaustrasse 6, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Langackerstr. 6, 8952 Schlieren","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Langackerstr. 6, 8952 Schlieren","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,"Langackerstr. 6, 8952 Schlieren","Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,"Langackerstr. 6, 8952 Schlieren","Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,"Langackerstr. 6, 8952 Schlieren",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,TBS Torbausysteme AG,TBS Torbausysteme AG,info@torbausysteme.ch,043 411 63 63,"Langackerstr. 6, 8952 Schlieren","Rietwiesenstrasse 11, 8156 Oberhasli",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Meier System AG,Meier System AG,info@meier-systems.ch,055 260 33 22,"Löwenweg 1 - 13, 8912 Obfelden","Studbachstrasse 25, 8340 Hinwil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,"Löwenweg 1 - 13, 8912 Obfelden","Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Benedikt Kurth,Benedikt Kurth,b.kurth@peterhalter.com,076 296 01 52,"Löwenweg 1 - 13, 8912 Obfelden",,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Swiss Green Life,Claudio De Gregorio,office@swiss-greenlife.ch,079 175 03 59,"Löwenweg 1 - 13, 8912 Obfelden","Kaiserstuhlstrasse 28, 8172 Niederglatt",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,"Löwenweg 1 - 13, 8912 Obfelden","Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,"Löwenweg 1 - 13, 8912 Obfelden","Friedaustrasse 6, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,"Löwenweg 1 - 13, 8912 Obfelden","Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,"Löwenweg 1 - 13, 8912 Obfelden","In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.rodjakovic@peterhalter.com,,"Löwenweg 1 - 13, 8912 Obfelden",,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,"Löwenweg 1 - 13, 8912 Obfelden","Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Mühlez. 56/Albisr. 261/263/265,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Mühlez. 56/Albisr. 261/263/265,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Mühlez. 56/Albisr. 261/263/265,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Mühlez. 56/Albisr. 261/263/265,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Mühlez. 56/Albisr. 261/263/265,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Mühlez. 56/Albisr. 261/263/265,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,Mühlez. 56/Albisr. 261/263/265,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Mühlez. 56/Albisr. 261/263/265,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Mühlez. 56/Albisr. 261/263/265,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Toma Metallwaren GmbH,Toma Metallwaren GmbH,info@toma-metall.ch,052 503 77 31,Mühlez. 56/Albisr. 261/263/265,"St. Gallerstr. 15, 8353 Elgg",,ChF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,ISS Facility Services,ISS Facility Services,lg-service@iss.ch,058 787 72 72,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,AS Aufzüge AG,AS Aufzüge AG,info.ch@lift.ch,0848 84 01 56,Alte Landstr. 37/37A/37B / Claridenstr. 19/21,"Friedgrabenstrasse 15, 8907 Wettswil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Claridenstr. 13/15/17,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Claridenstr. 13/15/17,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Claridenstr. 13/15/17,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Claridenstr. 13/15/17,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Claridenstr. 13/15/17,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Claridenstr. 13/15/17,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,ISS Facility Services,ISS Facility Services,lg-service@iss.ch,058 787 72 72,Claridenstr. 13/15/17,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Claridenstr. 13/15/17,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Claridenstr. 13/15/17,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Badenerstr. 825/827/829/831,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Badenerstr. 825/827/829/831,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Badenerstr. 825/827/829/831,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Badenerstr. 825/827/829/831,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Badenerstr. 825/827/829/831,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Badenerstr. 825/827/829/831,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,Badenerstr. 825/827/829/831,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Badenerstr. 825/827/829/831,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Badenerstr. 825/827/829/831,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Meier System AG,Meier System AG,info@meier-systems.ch,055 260 33 22,Buckhauserstr. 17/19/35/37,"Studbachstrasse 25, 8340 Hinwil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,Buckhauserstr. 17/19/35/37,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Buckhauserstr. 17/19/35/37,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Buckhauserstr. 17/19/35/37,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Buckhauserstr. 17/19/35/37,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Swiss Green Life,Claudio De Gregorio,office@swiss-greenlife.ch,079 175 03 59,Buckhauserstr. 17/19/35/37,"Kaiserstuhlstrasse 28, 8172 Niederglatt",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Buckhauserstr. 17/19/35/37,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Buckhauserstr. 17/19/35/37,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Buckhauserstr. 17/19/35/37,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.rodjakovic@peterhalter.com,,Buckhauserstr. 17/19/35/37,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,Buckhauserstr. 17/19/35/37,"Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Meier System AG,Meier System AG,info@meier-systems.ch,055 260 33 22,Buckhauserstr. 25/27/31/33,"Studbachstrasse 25, 8340 Hinwil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,Buckhauserstr. 25/27/31/33,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Buckhauserstr. 25/27/31/33,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Buckhauserstr. 25/27/31/33,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Buckhauserstr. 25/27/31/33,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Swiss Green Life,Claudio De Gregorio,office@swiss-greenlife.ch,079 175 03 59,Buckhauserstr. 25/27/31/33,"Kaiserstuhlstrasse 28, 8172 Niederglatt",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Buckhauserstr. 25/27/31/33,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Buckhauserstr. 25/27/31/33,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Buckhauserstr. 25/27/31/33,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.rodjakovic@peterhalter.com,,Buckhauserstr. 25/27/31/33,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,Buckhauserstr. 25/27/31/33,"Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Meier System AG,Meier System AG,info@meier-systems.ch,055 260 33 22,Buckhauserstr. 23,"Studbachstrasse 25, 8340 Hinwil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,Buckhauserstr. 23,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Buckhauserstr. 23,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Buckhauserstr. 23,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Buckhauserstr. 23,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Swiss Green Life,Claudio De Gregorio,office@swiss-greenlife.ch,079 175 03 59,Buckhauserstr. 23,"Kaiserstuhlstrasse 28, 8172 Niederglatt",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Buckhauserstr. 23,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Buckhauserstr. 23,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Buckhauserstr. 23,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.rodjakovic@peterhalter.com,,Buckhauserstr. 23,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,Buckhauserstr. 23,"Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Meier System AG,Meier System AG,info@meier-systems.ch,055 260 33 22,Buckhauserstr. 29,"Studbachstrasse 25, 8340 Hinwil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,Buckhauserstr. 29,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Buckhauserstr. 29,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Buckhauserstr. 29,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Buckhauserstr. 29,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Swiss Green Life,Claudio De Gregorio,office@swiss-greenlife.ch,079 175 03 59,Buckhauserstr. 29,"Kaiserstuhlstrasse 28, 8172 Niederglatt",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Buckhauserstr. 29,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Buckhauserstr. 29,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Buckhauserstr. 29,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.rodjakovic@peterhalter.com,,Buckhauserstr. 29,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,Buckhauserstr. 29,"Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Frankengasse 25,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Frankengasse 25,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Frankengasse 25,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Frankengasse 25,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Frankengasse 25,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Frankengasse 25,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Viana Sencadas Hauswartung & Reinigung,Viana Sencadas Hauswartung & Reinigung,v.sencadas@hotmail.com,079 754 17 87,Frankengasse 25,"Georg-Kempf-Strasse 25, 8046 Zürich",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Frankengasse 25,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Frankengasse 25,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Franklinstrasse 3,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Franklinstrasse 3,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Franklinstrasse 3,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Franklinstrasse 3,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Franklinstrasse 3,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Franklinstrasse 3,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Franklinstrasse 3,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Ruafix Reinigung und Hauswartung,Antonio Rua,info@ruafix.ch,079 647 92 70,Franklinstrasse 3,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Franklinstrasse 3,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Friedhofstrasse 43/45/47/51/53,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Friedhofstrasse 43/45/47/51/53,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Friedhofstrasse 43/45/47/51/53,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Friedhofstrasse 43/45/47/51/53,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Friedhofstrasse 43/45/47/51/53,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Friedhofstrasse 43/45/47/51/53,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Friedhofstrasse 43/45/47/51/53,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Friedhofstrasse 43/45/47/51/53,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Friedhofstrasse 43/45/47/51/53,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,General-Willestr. 301,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stecher AG,Stecher AG,info@stecher-staefa.ch,044 926 19 15,General-Willestr. 301,"Grundstrasse 16A, 8712 Stäfa",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,General-Willestr. 301,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,General-Willestr. 301,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,General-Willestr. 301,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,General-Willestr. 301,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Raffaela Amato,Raffaela Amato,raffaela64@gmx.ch,079 844 61 27,General-Willestr. 301,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,General-Willestr. 301,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,General-Willestr. 301,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,General-Willestr. 301,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Glärnischstrasse 39,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stecher AG,Stecher AG,info@stecher-staefa.ch,044 926 19 15,Glärnischstrasse 39,"Grundstrasse 16A, 8712 Stäfa",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Glärnischstrasse 39,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Glärnischstrasse 39,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Glärnischstrasse 39,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Glärnischstrasse 39,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Erwin Muggli,Erwin Muggli,muggli3@bluewin.ch,079 478 29 37,Glärnischstrasse 39,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Glärnischstrasse 39,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Glärnischstrasse 39,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Heinrichstrasse 2,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Heinrichstrasse 2,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Heinrichstrasse 2,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Heinrichstrasse 2,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Heinrichstrasse 2,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Heinrichstrasse 2,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,ISS Facility Services,ISS Facility Services,lg-service@iss.ch,058 787 72 72,Heinrichstrasse 2,"Vulkanplatz 3, 8010 Zürich",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Heinrichstrasse 2,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Heinrichstrasse 2,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Mühlebach Steuerungen + Antrieb AG,Mühlebach Steuerungen + Antrieb AG,muehlebach.h@bluewin.ch,044 734 29 92,Heinrichstrasse 2,"Grubenstrass 4, 8902 Urdorf",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Letzigraben 12,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Letzigraben 12,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Letzigraben 12,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Letzigraben 12,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Letzigraben 12,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Letzigraben 12,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,Letzigraben 12,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Letzigraben 12,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Letzigraben 12,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Rebbergstrasse 66,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Rebbergstrasse 66,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Rebbergstrasse 66,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Rebbergstrasse 66,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Rebbergstrasse 66,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Rebbergstrasse 66,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Rebbergstrasse 66,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Rebbergstrasse 66,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Rebbergstrasse 66,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Marquart Metall GmbH,Marquart Metall GmbH,info@marquart-torcenter.ch,055 253 42 42,Rebbergstrasse 66,"Höslistrasse 13, 8608 Bubikon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Regensbergstr. 94,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Regensbergstr. 94,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Regensbergstr. 94,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Regensbergstr. 94,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Regensbergstr. 94,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Regensbergstr. 94,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Regensbergstr. 94,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Regensbergstr. 94,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Regensbergstr. 94,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Röslistrasse 2,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Röslistrasse 2,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Röslistrasse 2,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Röslistrasse 2,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Röslistrasse 2,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Röslistrasse 2,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Röslistrasse 2,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Röslistrasse 2,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Röslistrasse 2,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,AS Aufzüge AG,AS Aufzüge AG,info.ch@lift.ch,0848 84 01 56,Röslistrasse 2,"Friedgrabenstrasse 15, 8907 Wettswil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Sonnenbergstr. 98,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Sonnenbergstr. 98,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Sonnenbergstr. 98,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Sonnenbergstr. 98,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Sonnenbergstr. 98,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Sonnenbergstr. 98,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,CasaRep AG,CasaRep AG,info@casarep.ch,044 350 64 64,Sonnenbergstr. 98,"Scherrstrasse 3, 8006 Zürich",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Sonnenbergstr. 98,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,Sonnenbergstr. 98,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Sonnenbergstr. 98,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Brander AG,Brander AG,info@branderag.ch,044 853 06 22,Sonnenbergstr. 98,"Riedterstrasse 17, 8162 Steinmaur",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Werdstr. 9,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Werdstr. 9,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Werdstr. 9,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Werdstr. 9,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Werdstr. 9,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Werdstr. 9,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,ISS Facility Services,ISS Facility Services,lg-service@iss.ch,058 787 72 72,Werdstr. 9,"Vulkanplatz 3, 8010 Zürich",,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Werdstr. 9,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Werdstr. 9,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Meier System AG,Meier System AG,info@meier-systems.ch,055 260 33 22,Wygarten 6,"Studbachstrasse 25, 8340 Hinwil",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Schindler Aufzüge AG Zürich,Schindler Aufzüge AG Zürich,zuerich.ch@schindler.com,044 404 15 15,Wygarten 6,"Südstrasse 5, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Wygarten 6,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Wygarten 6,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Wygarten 6,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Swiss Green Life,Claudio De Gregorio,office@swiss-greenlife.ch,079 175 03 59,Wygarten 6,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Wygarten 6,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Wygarten 6,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Benedikt Kurth,Benedikt Kurth,b.kurth@peterhalter.com,076 296 01 52,Wygarten 6,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.rodjakovic@peterhalter.com,,Wygarten 6,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+,,Fenster Doktor AG,Fenster Doktor AG,info@fensterdoktor.ch,0800 80 85 85,Wygarten 6,"Linthstrasse 53, 8856 Tuggen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Zürcherstr. 65 / 67 / 69 / 71,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Zürcherstr. 65 / 67 / 69 / 71,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Zürcherstr. 65 / 67 / 69 / 71,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Zürcherstr. 65 / 67 / 69 / 71,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Zürcherstr. 65 / 67 / 69 / 71,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Zürcherstr. 65 / 67 / 69 / 71,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Zürcherstr. 65 / 67 / 69 / 71,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Zürcherstr. 65 / 67 / 69 / 71,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Zürcherstr. 65 / 67 / 69 / 71,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Mühlebach Steuerungen + Antrieb AG,Mühlebach Steuerungen + Antrieb AG,muehlebach.h@bluewin.ch,044 734 29 92,Zürcherstr. 65 / 67 / 69 / 71,"Grubenstrass 4, 8902 Urdorf",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Badenerstr. 515 / 517 / 519,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Badenerstr. 515 / 517 / 519,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Badenerstr. 515 / 517 / 519,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Stromservice 7/24 AG,Stromservice 24/7,info@stromservice724.ch,044 438 62 42,Badenerstr. 515 / 517 / 519,"Zürcherstrasse 11, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Badenerstr. 515 / 517 / 519,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Badenerstr. 515 / 517 / 519,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Luis Soares,Luis Soares,l.soares@peterhalter.com,076 297 16 35,Badenerstr. 515 / 517 / 519,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Badenerstr. 515 / 517 / 519,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Badenerstr. 515 / 517 / 519,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Fernando Leite,Fernando Leite,f.leite@peterhalter.com,076 297 21 53,Rautihalde 1/3/5 / Eugen-Huberstr. 117,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Rautihalde 1/3/5 / Eugen-Huberstr. 117,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,Mühlebach Steuerungen + Antrieb AG,Mühlebach Steuerungen + Antrieb AG,muehlebach.h@bluewin.ch,044 734 29 92,Rautihalde 1/3/5 / Eugen-Huberstr. 117,"Grubenstrass 4, 8902 Urdorf",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Bristenstr. 17,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Bristenstr. 17,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Bristenstr. 17,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Elektro 21 AG,Elektro 21 AG,service@elektro21.ch,044 441 57 57,Bristenstr. 17,"Widenholzstrasse 1, 8304 Wallisellen",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Bristenstr. 17,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Bristenstr. 17,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,Bristenstr. 17,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,e.oezyuerek@peterhalter.com,,Bristenstr. 17,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Bristenstr. 17,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Sibir AG,Sibir,service@sibirgroup.ch,0844 848 848,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"Bahnhofstrasse 134, 8957 Spreitenbach",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Longhitano HLKS GmbH,Longhitano HLKS,cl@longhitano-hlks.ch,044 578 48 80,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"Badenerstrasse 519, 8048 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Kistler und Stettler AG,Kistler und Stettler,info@kistler-stettler.ch,044 310 20 00,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"Mattackerstrasse 26, 8052 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Strom Service 7/24,Strom Service 7/24,info@stromservice724.ch,044 438 62 42,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"Wiesenstrasse 37, 8952 Schlieren",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Jetzer Storen GmbH,Jetzer Storen,info@jetzer-storen.ch,044 401 07 47,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"In der Wässeri 16, 8047 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Weiss Security AG,Weiss Security,info@weisssecurity.ch,044 454 28 00,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"Goldbrunnenstrasse 93, 8055 Zürich",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,Quirino Passi,Quirino Passi,q.passi@peterhalter.com,076 361 20 43,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,,,CHF500.00,Deutsch,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+,,Peter Halter AG,Peter Halter,a.blum@peterhalter.com,,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,,,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+,,AndEra AG,AndEra AG,aziz@andera.ch,071 446 00 01,Baslerstr. 127/129/131/133 / Calandastr. 16/18 / Eisenbahnerstrasse 18/22 / Saumackerstrasse 21/23/25,"Haltenstrasse 3, 9320 Arbon",,CHF500.00,Deutsch,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
