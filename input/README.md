@@ -14,9 +14,10 @@ Contains property addresses to analyze.
 
 **Example:**
 ```
-Strasse,Hausnummer,PLZ
-Badenerstr.,727,8048
-Badenerstr.,731,8048
+Street,Number,PostalCode
+Main Street,101,10001
+Main Street,102,10001
+Oak Avenue,20,10002
 ```
 
 ### 2. craftsman.csv (or craftsmen.csv)
@@ -29,8 +30,9 @@ Contains craftsman data with specializations and service areas.
 
 **Example:**
 ```
-Firmenname,Category1,Category2,Einsatzgebiet
-Acme AG,TRUE,FALSE,"Badenerstr. 727, 731, 8048"
+Name,Plumbing,Electrical,ServiceAreas
+Smith Plumbing,TRUE,FALSE,"Main Street 101, 102"
+Jones Electric,FALSE,TRUE,"Oak Avenue 20"
 ```
 
 ## Notes

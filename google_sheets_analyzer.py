@@ -326,20 +326,14 @@ class StaticDataSource(DataSource):
     def fetch_properties(self) -> List[str]:
         """Fetch sample properties."""
         return [
-            "Badenerstr. 727",
-            "Badenerstr. 731",
-            "Badenerstr. 733",
-            "Im Struppen 8",
-            "Im Struppen 11",
-            "Im Struppen 12",
-            "Im Struppen 13",
-            "Im Struppen 14",
-            "Im Struppen 15",
-            "Im Struppen 16",
-            "Im Struppen 17",
-            "Im Struppen 19",
-            "Im Struppen 21",
-            "Meierwiesenstr. 52-58",
+            "Main Street 101 10001",
+            "Main Street 102 10001",
+            "Main Street 103 10001",
+            "Oak Avenue 20 10002",
+            "Oak Avenue 21 10002",
+            "Oak Avenue 22 10002",
+            "Elm Road 5 10003",
+            "Elm Road 6 10003",
         ]
 
     def fetch_categories(self) -> List[str]:
@@ -837,13 +831,13 @@ class CraftsmanCoverageAnalyzer:
         PLZ-only matching is not used to allow granular address-level control.
 
         Args:
-            property_address: Property address (e.g., "Badenerstr. 727 8048")
+            property_address: Property address (e.g., "Main Street 101 10001")
             category: Craftsman category
 
         Returns:
             List of craftsmen names that can serve this property/category
         """
-        street_name = self.extract_street_name(property_address)  # "Badenerstr. 727"
+        street_name = self.extract_street_name(property_address)  # "Main Street 101"
         property_numbers = self.extract_apartment_numbers(property_address)
         matching_craftsmen = []
 
@@ -860,14 +854,14 @@ class CraftsmanCoverageAnalyzer:
                 serves_property = True
             else:
                 # PRIORITY 1: Check for explicit address match
-                # E.g., "Badenerstr. 727" should match service areas containing it
+                # E.g., "Main Street 101" should match service areas containing it
                 for service_area in craftsman.service_areas_plz:
                     if street_name in service_area or service_area in street_name:
                         serves_property = True
                         break
 
                 # PRIORITY 2: Check apartment number matching
-                # E.g., property number "727" matches "Badenerstr. 727/731"
+                # E.g., property number "101" matches "Main Street 101/102"
                 if not serves_property and property_numbers:
                     for service_area in craftsman.service_areas_plz:
                         service_numbers = self.extract_apartment_numbers(service_area)

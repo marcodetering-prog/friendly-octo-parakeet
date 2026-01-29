@@ -21,15 +21,17 @@ Place two CSV files in the `input/` folder:
 
 **input/properties.csv** - Property addresses
 ```
-Strasse,Hausnummer,PLZ
-Badenerstr.,727,8048
-Badenerstr.,731,8048
+Street,Number,PostalCode
+Main Street,101,10001
+Main Street,102,10001
+Oak Avenue,20,10002
 ```
 
 **input/craftsman.csv** - Craftsmen data
 ```
-Name,Category1,Category2,service_areas
-Acme AG,TRUE,FALSE,"Badenerstr. 727, 731, 8048"
+Name,Plumbing,Electrical,ServiceAreas
+Smith Plumbing,TRUE,FALSE,"Main Street 101, 102"
+Jones Electric,FALSE,TRUE,"Oak Avenue 20"
 ```
 
 The analyzer automatically:
@@ -77,9 +79,9 @@ CRAFTSMAN_GID = 987654321
 
 ✅ Auto-detects columns from full Google Sheets exports
 ✅ Handles multi-line headers and descriptions
-✅ Deduplicates properties (1234 apartments → 108 unique properties)
+✅ Deduplicates properties (automatic apartment deduplication)
 ✅ Accumulates service areas for craftsmen with multiple rows
-✅ Smart address matching (handles "Str. 727" matching "Str. 727-733")
+✅ Smart address matching (bidirectional substring matching)
 ✅ Filters metadata columns automatically
 ✅ Works with CSV or Google Sheets
 ✅ No manual formatting needed
@@ -119,17 +121,17 @@ CRAFTSMAN_GID = 987654321
 
 ```
 Input:
-- 1234 apartment entries (multiple units per address)
-- 35 craftsmen with multiple service area rows
+- Multiple property entries (apartments and units)
+- Craftsmen with multiple service area rows
 
 Processing:
-- Properties deduplicated → 108 unique addresses
+- Properties deduplicated → unique addresses only
 - Craftsmen accumulated → all service areas per craftsman
 
 Output:
 - Coverage analysis per unique property address
-- 69/108 properties with full coverage (63.89% avg)
-- Gap identification for remaining properties
+- Summary statistics (total coverage, gaps, categories)
+- Gap identification for properties needing service
 ```
 
 ## Command Reference
@@ -145,4 +147,4 @@ craftsman_coverage_report.csv     # Spreadsheet-friendly gaps
 
 ---
 
-**Status**: Production ready | **Categories**: 15 | **Properties**: 108 unique | **Craftsmen**: 35
+**Status**: Production ready
