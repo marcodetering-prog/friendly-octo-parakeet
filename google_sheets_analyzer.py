@@ -1610,6 +1610,120 @@ class ReportGenerator:
         return "\n".join(output)
 
     @staticmethod
+    def generate_html_report(
+        analyses: List[PropertyCoverageAnalysis],
+        summary: CoverageSummary,
+    ) -> str:
+        """
+        Generate HTML report (can be opened in Word).
+
+        Args:
+            analyses: List of PropertyCoverageAnalysis objects
+            summary: CoverageSummary object
+
+        Returns:
+            HTML string
+        """
+        html_parts = [
+            "<!DOCTYPE html>",
+            "<html>",
+            "<head>",
+            "<meta charset='UTF-8'>",
+            "<title>Craftsman Coverage Report</title>",
+            "<style>",
+            "body { font-family: Arial, sans-serif; margin: 20px; }",
+            "h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }",
+            "h2 { color: #555; margin-top: 30px; }",
+            "table { border-collapse: collapse; width: 100%; margin: 15px 0; }",
+            "th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }",
+            "th { background-color: #007bff; color: white; }",
+            "tr:nth-child(even) { background-color: #f9f9f9; }",
+            ".summary-stat { display: inline-block; margin-right: 30px; }",
+            ".stat-value { font-size: 24px; font-weight: bold; color: #007bff; }",
+            ".stat-label { color: #666; }",
+            ".gap-section { margin: 20px 0; padding: 15px; background-color: #fff3cd; border-left: 4px solid #ffc107; }",
+            ".full-coverage { color: #28a745; font-weight: bold; }",
+            ".no-coverage { color: #dc3545; font-weight: bold; }",
+            "</style>",
+            "</head>",
+            "<body>",
+            "<h1>Craftsman Coverage Analysis Report</h1>",
+            f"<p><strong>Generated:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
+            "<p><strong>Data Source:</strong> " + summary.data_source + "</p>",
+            "<h2>Summary Statistics</h2>",
+            "<div class='summary-stat'>",
+            "<div class='stat-value'>" + str(summary.total_properties) + "</div>",
+            "<div class='stat-label'>Total Properties</div>",
+            "</div>",
+            "<div class='summary-stat'>",
+            "<div class='stat-value full-coverage'>" + str(summary.properties_with_full_coverage) + "</div>",
+            "<div class='stat-label'>Full Coverage</div>",
+            "</div>",
+            "<div class='summary-stat'>",
+            "<div class='stat-value no-coverage'>" + str(summary.properties_with_gaps) + "</div>",
+            "<div class='stat-label'>With Gaps</div>",
+            "</div>",
+            "<div class='summary-stat'>",
+            "<div class='stat-value'>" + f"{round(summary.average_coverage_percentage, 1)}" + "%</div>",
+            "<div class='stat-label'>Average Coverage</div>",
+            "</div>",
+            "<br><br>",
+            "<table>",
+            "<tr><th>Metric</th><th>Value</th></tr>",
+            "<tr><td>Total Properties</td><td>" + str(summary.total_properties) + "</td></tr>",
+            "<tr><td>Properties with Full Coverage</td><td>" + str(summary.properties_with_full_coverage) + " (" + f"{round(summary.properties_with_full_coverage/summary.total_properties*100, 1)}" + "%)</td></tr>",
+            "<tr><td>Properties with Gaps</td><td>" + str(summary.properties_with_gaps) + " (" + f"{round(summary.properties_with_gaps/summary.total_properties*100, 1)}" + "%)</td></tr>",
+            "<tr><td>Total Gaps</td><td>" + str(summary.total_gaps_across_all_properties) + "</td></tr>",
+            "<tr><td>Average Coverage</td><td>" + f"{round(summary.average_coverage_percentage, 2)}" + "%</td></tr>",
+            "</table>",
+            "<h2>Categories with Lowest Coverage</h2>",
+            "<table>",
+            "<tr><th>Category</th><th>Properties with Gaps</th></tr>",
+        ]
+
+        for category, count in summary.categories_with_lowest_coverage.items():
+            html_parts.append(f"<tr><td>{category}</td><td>{count}</td></tr>")
+
+        html_parts.extend([
+            "</table>",
+            "<h2>Properties with Gaps</h2>",
+        ])
+
+        gaps_found = False
+        for analysis in sorted(analyses, key=lambda x: x.property_name):
+            if analysis.has_gaps():
+                gaps_found = True
+                html_parts.append(f"<div class='gap-section'>")
+                html_parts.append(f"<h3>{analysis.property_name}</h3>")
+                html_parts.append(f"<p><strong>Coverage:</strong> {analysis.covered_categories}/{analysis.total_categories} categories ({round(analysis.coverage_percentage, 1)}%)</p>")
+                html_parts.append("<ul>")
+                for gap in analysis.gaps:
+                    html_parts.append(f"<li><strong>{gap.category}</strong></li>")
+                html_parts.append("</ul>")
+                html_parts.append("</div>")
+
+        if not gaps_found:
+            html_parts.append("<p><em>No properties with gaps found!</em></p>")
+
+        html_parts.extend([
+            "<h2>Properties with Full Coverage</h2>",
+            "<table>",
+            "<tr><th>Property</th><th>Coverage</th></tr>",
+        ])
+
+        for analysis in sorted(analyses, key=lambda x: x.property_name):
+            if not analysis.has_gaps():
+                html_parts.append(f"<tr><td>{analysis.property_name}</td><td class='full-coverage'>100%</td></tr>")
+
+        html_parts.extend([
+            "</table>",
+            "</body>",
+            "</html>",
+        ])
+
+        return "\n".join(html_parts)
+
+    @staticmethod
     def generate_text_report(
         analyses: List[PropertyCoverageAnalysis],
         summary: CoverageSummary,
@@ -1835,6 +1949,13 @@ def main():
         with open(csv_path, "w", encoding="utf-8") as f:
             f.write(csv_report)
         print(f"CSV report saved to: {csv_path}")
+
+        # Save HTML report (can be opened in Word)
+        html_report = ReportGenerator.generate_html_report(analyses, summary)
+        html_path = output_dir / f"craftsman_coverage_report_{timestamp}.html"
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(html_report)
+        print(f"HTML report saved to: {html_path}")
 
         print("")
         print("All reports generated successfully!")
