@@ -2068,28 +2068,44 @@ class ReportGenerator:
         if gap_analyses:
             elements.append(PageBreak())
             elements.append(Paragraph("Properties with Coverage Gaps", heading_style))
-            gap_data = [["Property", "Coverage %", "Covered / Total", "Missing Categories"]]
+            gap_data = [["Property", "Coverage %", "Covered / Total"]]
             for analysis in gap_analyses:
-                missing_cats = ", ".join([gap.category for gap in analysis.gaps])
                 gap_data.append([
                     analysis.property_name,
                     f"{analysis.coverage_percentage:.1f}%",
-                    f"{analysis.covered_categories}/{analysis.total_categories}",
-                    missing_cats
+                    f"{analysis.covered_categories}/{analysis.total_categories}"
                 ])
-            gap_table = Table(gap_data, colWidths=[1.5*inch, 1*inch, 1.2*inch, 1.3*inch])
+            gap_table = Table(gap_data, colWidths=[3*inch, 1.5*inch, 1.5*inch])
             gap_table.setStyle(TableStyle([
                 ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#ff8c42')),
                 ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-                ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                ('ALIGN', (0, 0), (0, -1), 'LEFT'),
                 ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                ('FONTSIZE', (0, 0), (-1, 0), 10),
+                ('FONTSIZE', (0, 0), (-1, 0), 11),
                 ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
                 ('BACKGROUND', (0, 1), (-1, -1), colors.HexColor('#fff8f0')),
                 ('GRID', (0, 0), (-1, -1), 1, colors.black),
-                ('FONTSIZE', (0, 1), (-1, -1), 8),
+                ('FONTSIZE', (0, 1), (-1, -1), 9),
+                ('ROWPADDING', (0, 0), (-1, -1), 8),
             ]))
             elements.append(gap_table)
+            elements.append(Spacer(1, 0.2*inch))
+
+            # List missing categories for each gap property
+            elements.append(Paragraph("Missing Categories by Property", ParagraphStyle(
+                'SubHeading',
+                parent=styles['Heading3'],
+                fontSize=11,
+                textColor=colors.HexColor('#333'),
+                spaceAfter=10
+            )))
+            for analysis in gap_analyses:
+                missing_cats = ", ".join([gap.category for gap in analysis.gaps])
+                elements.append(Paragraph(
+                    f"<b>{analysis.property_name}:</b> {missing_cats}",
+                    styles['Normal']
+                ))
             elements.append(Spacer(1, 0.3*inch))
 
         # Properties with full coverage
